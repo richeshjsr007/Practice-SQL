@@ -85,8 +85,28 @@ select p.product_name, AVG(l.loan_amount) AS Avg_loan
     HAVING AVG(l.loan_amount)> 500000 ;
     
 -- 14.	Find branches with more than 500 active loans.
+SELECT B.BRANCH_NAME, COUNT(*)AS Active_loan
+FROM BRANCHES B
+INNER JOIN LOANS L ON B.BRANCH_ID = L.BRANCH_ID
+WHERE L.LOAN_STATUS = 'Active'
+GROUP BY B.BRANCH_NAME
+HAVING COUNT(*)> 500
+ORDER BY Active_loan DESC;
+
 -- 15.	Calculate total repayment collected by branch.
+SELECT b.branch_name, SUM(r.amount_paid) AS total_repayment_collected
+FROM BRANCHES b 
+Inner join loans l on b.branch_id = l.branch_id
+INNER join repayments r on l.loan_id = r.loan_id 
+GROUP BY b.branch_name ;
+
 -- 16.	Find average DPD by branch.
+SELECT b.branch_name, AVG(DPD) AS AVG_DPD
+FROM BRANCHES b 
+INNER join loans l on b.branch_id = l.branch_id
+INNER join repayments r on l.loan_id = r.loan_id 
+GROUP BY b.branch_name ;
+
 -- 17.	Find total outstanding loan amount by city.
 -- 18.	Show account type-wise average balance.
 -- 19.	Find customer count by branch and gender.
@@ -94,3 +114,4 @@ select p.product_name, AVG(l.loan_amount) AS Avg_loan
 
 
     
+ 
