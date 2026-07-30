@@ -108,6 +108,12 @@ INNER join repayments r on l.loan_id = r.loan_id
 GROUP BY b.branch_name ;
 
 -- 17.	Find total outstanding loan amount by city.
+SELECT C.CITY, 
+ SUM (L.LOAN_AMOUNT -(select coalesce(sum(AMOUNT_PAID),0)from repayments where loan_id = l.loan_id) ) AS total_outstanding
+ FROM customers C
+ INNER JOIN loans L ON C.CUSTOMER_ID = L.CUSTOMER_ID
+ GROUP BY C.CITY
+ 
 -- 18.	Show account type-wise average balance.
 -- 19.	Find customer count by branch and gender.
 -- 20.	Find branch-wise average customer income.
