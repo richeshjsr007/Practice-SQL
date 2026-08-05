@@ -34,3 +34,10 @@ VALUES
 ('Consider the Lobster', 'David', 'Foster Wallace', 2005, 92, 343);
 
 SELECT * FROM books;
+
+--/ 1. CONCAT / CONCATENATE (Combine dat for cleaner output)
+
+
+
+
+
