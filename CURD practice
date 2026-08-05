@@ -31,7 +31,7 @@ values ('polo shirt','purple','M',50);
 SELECT article, color FROM shirts;
 
 --/Choose everything from table except shirt_id and shirt_size should be medium(M).
-SELECT * FROM shirts
+SELECT article, color, shirt_size, last_worn FROM shirts
 WHERE shirt_size = 'M';
 
 --/ Update all the polo shirt size to 'L'.
