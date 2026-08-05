@@ -40,7 +40,7 @@ SELECT * FROM books;
 select concat('H','E','L','L','O');
 
 -- Show author's full name. 
-select concat(author_fname,author_lname) AS Full_name
+select concat(author_fname,' ',author_lname) AS Full_name
 FROM books;
 
 
