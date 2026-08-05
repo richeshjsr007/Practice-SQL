@@ -1,0 +1,63 @@
+-- Practice CURD rule CREATE UPDATE RETRIVE DELETE --
+
+create database shirts_db;
+
+CREATE TABLE shirts (
+shirt_id INT auto_increment,
+article varchar (15),
+color varchar (15),
+shirt_size varchar(5),
+last_worn int,
+primary key (shirt_id)
+)
+;
+
+INSERT INTO shirts (article, color, shirt_size, last_worn)
+values ('t-shirt','white','S',10),
+('t-shirt','green','S',200),
+('polo shirt','black','M',10),
+('tank top','blue','S',50),
+('polo shirt','red','M',5),
+('tank top','white','S',200),
+('tank top','blue','M',15);
+
+INSERT INTO shirts (article, color, shirt_size, last_worn)
+values ('polo shirt','purple','M',50);
+
+                   --  Practice queries --
+--/Choose article & color from table.
+SELECT article, color FROM shirts;
+
+--/Choose everything from table except shirt_id and shirt_size should be medium(M).
+SELECT article, color, shirt_size, last_worn FROM shirts
+WHERE shirt_size = 'M';
+
+--/ Update all the polo shirt size to 'L'.
+UPDATE shirts 
+SET shirt_size = 'L'
+WHERE article = 'polo shirt';
+
+--/ Update all shirts last worn to 0 which was worn 15 days ago.
+UPDATE shirts 
+SET last_worn = 0
+WHERE last_worn > 15;
+
+--/ Update all the WHITE shirt's color to 'off white' & size to 'XS'.
+UPDATE shirts 
+SET color = 'off white', shirt_size = 'XS'
+WHERE color = 'white';
+
+--/ Delete all the shirts that was last worn 200 days ago.
+delete from shirts
+where last_worn > 200 ;
+
+--/ Delete all the tank tops from the record.
+delete from shirts
+where article ='tank top' ;
+Select * from shirts;
+
+--/ Delete all the shirts from the record.
+delete from shirts;
+
+--/ Delete table shirts.
+DROP table shirts;
