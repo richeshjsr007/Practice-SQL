@@ -2,6 +2,8 @@
 
 create database shirts_db;
 
+USE shirts_db;
+
 CREATE TABLE shirts (
 shirt_id INT auto_increment,
 article varchar (15),
