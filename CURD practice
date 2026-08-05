@@ -50,16 +50,20 @@ SET color = 'off white', shirt_size = 'XS'
 WHERE color = 'white';
 
 --/ Delete all the shirts that was last worn 200 days ago.
+SELECT * FROM shirts WHERE last_worn=200;
 delete from shirts
 where last_worn > 200 ;
 
 --/ Delete all the tank tops from the record.
+SELECT * FROM shirts WHERE article='tank top';
 delete from shirts
 where article ='tank top' ;
-Select * from shirts;
 
 --/ Delete all the shirts from the record.
+SELECT * FROM shirts;
 delete from shirts;
 
 --/ Delete table shirts.
 DROP table shirts;
+
+show tables;
