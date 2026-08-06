@@ -55,6 +55,8 @@ O/P - 'Hello wo'
 
 --Example 2 :-  Show title with 10 character only 
 SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+or 
+SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
 
 -- 
 
