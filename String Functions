@@ -58,6 +58,7 @@ SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
 or 
 SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
 
+
 -- 
 
 
