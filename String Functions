@@ -43,7 +43,10 @@ select concat('H','E','L','L','O');
 select concat(author_fname,' ',author_lname) AS Author_name
 FROM books;
 
-
+-- / 2. CONCAT_WS (Concatenate with Seperator)
+-- Show full name using seperator
+select concat_ws('-',author_fname, author_lname) AS Author_name
+FROM books;
 
 
 
