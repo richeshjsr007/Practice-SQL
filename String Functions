@@ -48,5 +48,40 @@ FROM books;
 select concat_ws('-',author_fname, author_lname) AS Author_name
 FROM books;
 
+-- / 3. SUBSTRING  (SUBSTR) (It takes a single larger string and returns smaller portion of that string)
+-- Example :- 
+select substr ('Hello world',1,8) ;
+O/P - 'Hello wo'
+
+--Example 2 :-  Show title with 10 character only 
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+
+-- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
