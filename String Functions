@@ -69,7 +69,11 @@ substr(title,1,10),
 '-',released_year) AS short_title 
 from books;
 
+-- Fetch initials from authors name 
 
+select substr(author_fname,1,1) AS first_initial,
+substr(author_lname,1,1) As last_initial 
+from books;
 
 
 
