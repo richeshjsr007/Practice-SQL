@@ -169,6 +169,17 @@ SELECT
 FROM
     books;
 
+-- Combine CONCAT with CHAR_LENGTH 
+-- Display authors last name with there character length.
+
+SELECT 
+    CONCAT(author_lname,
+            ' is ',
+            CHAR_LENGTH(author_lname),
+            ' characters long') As author
+FROM
+    books;
+
 
 
 
