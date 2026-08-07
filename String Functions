@@ -64,7 +64,10 @@ SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
 -- / 4. -- Combining STRING Functions - (concatenate & substring)
 -- Show 1st 10 characters of Title along with release year 
 
-select concat(substr(title,1,10), '-',released_year) from books;
+select concat(
+substr(title,1,10),
+'-',released_year) AS short_title 
+from books;
 
 
 
