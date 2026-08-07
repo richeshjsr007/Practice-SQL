@@ -135,6 +135,12 @@ SELECT
 FROM
     books;
 
+-- / 6. REVERSE (Reverse the string order) -
+-- command = " REVERSE (str)"
+
+-- Example -  Reverse 'ABCDEFGH'
+
+SELECT REVERSE('ABCDEFGH') AS REVERESED;
 
 
 
