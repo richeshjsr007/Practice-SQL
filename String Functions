@@ -149,6 +149,12 @@ SELECT
 FROM
     books;
 
+-- Using REVERSE with CONCAT
+
+ SELECT 
+    CONCAT(author_fname, '_', REVERSE(author_fname)) AS Author_name
+FROM
+    books;
 
 
 
