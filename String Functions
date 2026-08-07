@@ -194,7 +194,7 @@ FROM
     books;
 
 -- / 9. Using other function 
--- a :- Instering any charcter in between string 
+-- A :- Instering any charcter in between string 
 -- command = INSERT (str, postion, length, newstr)
 -- Example :-  Inster 'there' in 'Hello mate!'
 
@@ -206,7 +206,7 @@ SELECT INSERT('Hello mate!', 6, 0, ' there') AS greet;
 SELECT INSERT('Hello mate!', 6, 5, ' world') AS greet; 
 -- (there is space '_world' & '5' denotes we've replaced 5 char.)
 
--- b :- selecting charcters from LEFT or RIGHT
+-- B :- Selecting charcters from LEFT or RIGHT
 -- command = LEFT (str,len); (Returns leftmost len character from string)
              RIGHT (str,len); (Returns rightmost len character from string)   
 -- here str = string & len = to what length 
@@ -214,11 +214,44 @@ SELECT INSERT('Hello mate!', 6, 5, ' world') AS greet;
 -- Example :-  'Practice-SQL'
 
 SELECT LEFT('Practice-SQL', 8) As Left_char;
-O/P =  'Practice'
+-- O/P =  'Practice'
 
 SELECT RIGHT('Practice-SQL',3) As Right_char;
-O/P = 'SQL'
+-- O/P = 'SQL'
 
+-- C :- Repeat any string 
+-- command = REPEAT (str,count)
+-- count = no.of repate count
+
+-- Example :-  'Ha'
+
+SELECT REPEAT('Ha', 5) AS repeated;
+-- O/P = 'HaHaHaHaHa'
+
+-- D :- TRIM -  used to remove spaces
+-- command = TRIM(str)
+-- Example :-  '  OM  '
+
+SELECT TRIM('  om  ') AS trimmed;
+-- O/P = 'om'
+
+-- Trim using "LEADING" to remove specific character from leftmost part of string
+-- Example :- 'iamOMok'
+
+SELECT TRIM(LEADING 'iam' FROM 'iamOMok') AS trimmed;
+-- O/P = 'OMok'
+
+-- Trim using BOTH to remove specific character from BOTH side of string 
+-- Example : - 'iiOMii'
+
+SELECT TRIM(BOTH 'i' FROM 'iiOMii') AS trimmed;
+-- O/P = 'OM'
+
+-- Trim using TRAILING to remove specific character from rightmost part of string 
+-- Example : - 'iamOMnot'
+
+SELECT TRIM(TRAILING 'not' FROM 'iamOMnot') AS trimmed;
+-- O/P = 'iamOM'
 
 
 
