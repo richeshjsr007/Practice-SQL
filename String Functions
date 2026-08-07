@@ -142,7 +142,12 @@ FROM
 
 SELECT REVERSE('ABCDEFGH') AS REVERESED;
 
+-- Reverse authors firstname from books 
 
+SELECT 
+    REVERSE(author_fname) AS author
+FROM
+    books;
 
 
 
