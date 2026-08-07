@@ -40,14 +40,18 @@ SELECT * FROM books;
 select concat('H','E','L','L','O');
 
 -- Show author's full name. 
-select concat(author_fname,' ',author_lname) AS Author_name
-FROM books;
+select 
+  concat_ws('-', author_fname, author_lname) AS Author_name 
+FROM 
+  books;
 
 -- / 2. CONCAT_WS (Concatenate with Seperator)
 
 -- Show full name using seperator
-select concat_ws('-',author_fname, author_lname) AS Author_name
-FROM books;
+select 
+  concat_ws('-', author_fname, author_lname) AS Author_name 
+FROM 
+  books;
 
 -- / 3. SUBSTRING  (SUBSTR) (It takes a single larger string and returns smaller portion of that string)
 
@@ -57,35 +61,57 @@ O/P - 'Hello wo'
 
 --Example 2 :-  Show only 1st 10 characters of Title 
 
-SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+SELECT 
+  SUBSTRING(title, 1, 10) AS 'short title' 
+FROM 
+  books;
 or 
-SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
+SELECT 
+  SUBSTR(title, 1, 10) AS 'short title' 
+FROM 
+  books;
 
 -- / 4. -- COMBINING STRING FUNCTIONS - (concatenate & substring)
 -- Show 1st 10 characters of Title along with release year 
 
-select concat(
-substr(title,1,10),
-'-',released_year) AS short_title 
-from books;
+select 
+  concat(
+    substr(title, 1, 10), 
+    '-', 
+    released_year
+  ) AS short_title 
+from 
+  books;
 
 -- Fetch initials of authors name from the books
 
-select substr(author_fname,1,1) AS first_initial,
-substr(author_lname,1,1) As last_initial 
-from books;
+select 
+  substr(author_fname, 1, 1) AS first_initial, 
+  substr(author_lname, 1, 1) As last_initial 
+from 
+  books;
 
 -- Fetch initials of authors name from the books and combine them
 
-select concat(substr(author_fname,1,1), 
-substr(author_lname,1,1)) 
-from books;
+select 
+  concat(
+    substr(author_fname, 1, 1), 
+    substr(author_lname, 1, 1)
+  ) 
+from 
+  books;
 
 -- select the initials of authors name from the books, separated by a period
 
-select concat(substr(author_fname,1,1), '.',
-substr(author_lname,1,1),'.') As author_initials
-from books;
+select 
+  concat(
+    substr(author_fname, 1, 1), 
+    '.', 
+    substr(author_lname, 1, 1), 
+    '.'
+  ) As author_initials 
+from 
+  books;
 
 
 
