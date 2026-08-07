@@ -185,6 +185,13 @@ FROM
 SELECT UPPER('Good Day'); or SELECT UCASE('Good Day');  -- O/P = 'GOOD DAY'
 SELECT LOWER('Good Day'); or SELECT LCASE('Good Day'); -- O/P = 'good day'
 
+-- /  Combine CONCAT with UCASE or LCASE 
+--  Display 'I LOVE' with title and !!! from books
+
+SELECT 
+    CONCAT('I LOVE', ' ', UCASE(title), '!!!') AS books
+FROM
+    books;
 
 
 
