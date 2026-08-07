@@ -81,10 +81,10 @@ select concat(substr(author_fname,1,1),
 substr(author_lname,1,1)) 
 from books;
 
--- select the initials of authors name from the books, separated by a hyphen
+-- select the initials of authors name from the books, separated by a period
 
-select concat(substr(author_fname,1,1), '-',
-substr(author_lname,1,1)) 
+select concat(substr(author_fname,1,1), '.',
+substr(author_lname,1,1),'.') As author_initials
 from books;
 
 
