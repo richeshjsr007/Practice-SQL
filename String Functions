@@ -193,6 +193,18 @@ SELECT
 FROM
     books;
 
+-- / 9. Using other function 
+-- a :- Instering any charcter in between string 
+-- command = INSERT (str, postion, length, newstr)
+-- Example :-  Inster 'there' in 'Hello mate!'
+
+SELECT INSERT('Hello mate!', 6, 0, ' there') AS greet; - (there is space '_there')
+
+-- Example 2. Replace 'Hello mate!' to 'Hello world!'
+
+SELECT INSERT('Hello mate!', 6, 5, ' world') AS greet; - (there is space '_world')
+
+
 
 
 
