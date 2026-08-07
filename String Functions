@@ -116,10 +116,18 @@ from
 -- / 5. REPLACE (Replace parts of string) -
 -- command = " REPLACE (str,from_str,to_str)"
 
---Example - 'Lovely Day' & change to 'Bad DAY'
+--Example 1. - 'Lovely Day' change to 'Bad DAY'
 
  SELECT REPLACE('Lovely Day', 'Lovely', 'Bad');
  O/P -  'Bad DAY'
+
+-- Example 2. - 'Car Bike Train Ship Plane' add comma seperator.
+
+SELECT 
+    REPLACE('Car Bike Train Ship Plane',
+        ' ',
+        ',') As vehicles;
+
 
 
 
