@@ -71,7 +71,7 @@ SELECT
 FROM 
   books;
 
--- / 4. -- COMBINING STRING FUNCTIONS - (concatenate & substring)
+-- / 4. COMBINING STRING FUNCTIONS - (concatenate & substring)
 -- Show 1st 10 characters of Title along with release year 
 
 select 
@@ -113,6 +113,13 @@ select
 from 
   books;
 
+-- / 5. REPLACE (Replace parts of string) -
+-- command = " REPLACE (str,from_str,to_str)"
+
+--Example - 'Lovely Day' & change to 'Bad DAY'
+
+ SELECT REPLACE('Lovely Day', 'Lovely', 'Bad');
+ O/P -  'Bad DAY'
 
 
 
