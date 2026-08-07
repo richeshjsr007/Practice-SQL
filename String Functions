@@ -128,7 +128,12 @@ SELECT
         ' ',
         ',') As vehicles;
 
+-- Fetch title from the books and replace all spaces in the titles with underscores '_'.
 
+   SELECT 
+    REPLACE(title, ' ', '_') As title
+FROM
+    books;
 
 
 
