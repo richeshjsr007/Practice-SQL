@@ -44,23 +44,27 @@ select concat(author_fname,' ',author_lname) AS Author_name
 FROM books;
 
 -- / 2. CONCAT_WS (Concatenate with Seperator)
+
 -- Show full name using seperator
 select concat_ws('-',author_fname, author_lname) AS Author_name
 FROM books;
 
 -- / 3. SUBSTRING  (SUBSTR) (It takes a single larger string and returns smaller portion of that string)
+
 -- Example :- 
 select substr ('Hello world',1,8) ;
 O/P - 'Hello wo'
 
---Example 2 :-  Show title with 10 character only 
+--Example 2 :-  Show only 1st 10 characters of Title 
+
 SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
 or 
 SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
 
+-- / 4. -- Combining STRING Functions - (concatenate & substring)
+-- Show 1st 10 characters of Title along with release year 
 
--- 
-
+select concat(substr(title,1,10), '-',released_year) from books;
 
 
 
