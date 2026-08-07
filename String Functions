@@ -162,6 +162,12 @@ FROM
 -- Example :-  select char_length("richesh");
    O/P = 7
 
+-- Display books title and their charcter length from Books.
+
+SELECT 
+    title,char_length(title) AS Title_length
+FROM
+    books;
 
 
 
