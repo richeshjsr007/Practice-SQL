@@ -198,7 +198,7 @@ FROM
 -- command = INSERT (str, postion, length, newstr)
 -- Example :-  Inster 'there' in 'Hello mate!'
 
-SELECT INSERT('Hello mate!', 6, 0, ' there') AS greet; - (there is space '_there')
+SELECT INSERT('Hello mate!', 6, 0, ' there') AS greet; - (there is space '_there' & '0' denotes we're not replacing anything)
 
 -- Example 2. Replace 'Hello mate!' to 'Hello world!'
 
