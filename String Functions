@@ -156,6 +156,11 @@ FROM
 FROM
     books;
 
+-- / 7. CHAR_LENGTH (Count Characters in String)
+-- command = "CHAR_LENGTH(Str)" or "SELECT CHAR_LENGTH(Str)"
+
+-- Example :-  select char_length("richesh");
+   O/P = 7
 
 
 
