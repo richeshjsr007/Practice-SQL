@@ -180,7 +180,10 @@ SELECT
 FROM
     books;
 
-
+-- / 8. UPPER(str)/ UCASE(str) and LOWER(str)/ LCASE(str) (Change a strings Case)
+-- Example :- use - 'Good Day'
+SELECT UPPER('Good Day'); or SELECT UCASE('Good Day');  -- O/P = 'GOOD DAY'
+SELECT LOWER('Good Day'); or SELECT LCASE('Good Day'); -- O/P = 'good day'
 
 
 
