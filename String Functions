@@ -61,7 +61,7 @@ SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
 or 
 SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
 
--- / 4. -- Combining STRING Functions - (concatenate & substring)
+-- / 4. -- COMBINING STRING FUNCTIONS - (concatenate & substring)
 -- Show 1st 10 characters of Title along with release year 
 
 select concat(
@@ -69,13 +69,23 @@ substr(title,1,10),
 '-',released_year) AS short_title 
 from books;
 
--- Fetch initials from authors name 
+-- Fetch initials of authors name from the books
 
 select substr(author_fname,1,1) AS first_initial,
 substr(author_lname,1,1) As last_initial 
 from books;
 
+-- Fetch initials of authors name from the books and combine them
 
+select concat(substr(author_fname,1,1), 
+substr(author_lname,1,1)) 
+from books;
+
+-- select the initials of authors name from the books, separated by a hyphen
+
+select concat(substr(author_fname,1,1), '-',
+substr(author_lname,1,1)) 
+from books;
 
 
 
