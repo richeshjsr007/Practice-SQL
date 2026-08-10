@@ -261,14 +261,32 @@ SELECT ucase(
     AS REVERSED;
 
 -- 2. Replace space with '_' from 'I like cats'
+
 SELECT 
     REPLACE(CONCAT('I', ' ', 'like', ' ', 'cats'),
         ' ',
         '_') AS Replaced;
 
+-- 3. Replace spaces in titles with '->'
 
+SELECT 
+    REPLACE(title, ' ', '->') AS updated
+FROM
+    books;
 
+-- 4. Display authors last name along with reversed format
 
+SELECT 
+    author_lname AS forward, REVERSE(author_lname) AS backward
+FROM
+    books; 
+
+-- 5. Display authors full name in uppercase
+
+SELECT 
+    UCASE(CONCAT(author_fname, '  ', author_lname)) AS full_name
+FROM
+    books;
 
 
 
