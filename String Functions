@@ -284,7 +284,7 @@ FROM
 -- 5. Display authors full name in uppercase
 
 SELECT 
-    UCASE(CONCAT(author_fname, '  ', author_lname)) AS full_name
+    UCASE(CONCAT(author_fname, '  ', author_lname)) AS 'full name in caps'
 FROM
     books;
 
