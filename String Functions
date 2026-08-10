@@ -297,7 +297,14 @@ SELECT
             ' ',
             released_year) As 'Books detail'
 FROM
-    books; 
+    books;
+
+-- 7. Display books title and its character counts.   
+
+SELECT 
+    title AS Title, CHAR_LENGTH(title) AS 'character length'
+FROM
+    books;
 
 
 
