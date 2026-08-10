@@ -253,7 +253,18 @@ SELECT TRIM(BOTH 'i' FROM 'iiOMii') AS trimmed;
 SELECT TRIM(TRAILING 'not' FROM 'iamOMnot') AS trimmed;
 -- O/P = 'iamOM'
 
+-- Practice Taks --
+-- 1. Reverse and uppercase - 'why does my cat look at me with such hatred'
 
+SELECT ucase(
+    REVERSE('why does my cat look at me with such hatred') )
+    AS REVERSED;
+
+-- 2. Replace space with '_' from 'I like cats'
+SELECT 
+    REPLACE(CONCAT('I', ' ', 'like', ' ', 'cats'),
+        ' ',
+        '_') AS Replaced;
 
 
 
