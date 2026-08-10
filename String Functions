@@ -254,40 +254,50 @@ SELECT TRIM(TRAILING 'not' FROM 'iamOMnot') AS trimmed;
 -- O/P = 'iamOM'
 
 -- Practice Taks --
--- 1. Reverse and uppercase - 'why does my cat look at me with such hatred'
+-- 1. Reverse and uppercase - 'why does my cat look at me with such hatred'.
 
 SELECT ucase(
     REVERSE('why does my cat look at me with such hatred') )
     AS REVERSED;
 
--- 2. Replace space with '_' from 'I like cats'
+-- 2. Replace space with '_' from 'I like cats'.
 
 SELECT 
     REPLACE(CONCAT('I', ' ', 'like', ' ', 'cats'),
         ' ',
         '_') AS Replaced;
 
--- 3. Replace spaces in titles with '->'
+-- 3. Replace spaces in titles with '->'.
 
 SELECT 
     REPLACE(title, ' ', '->') AS updated
 FROM
     books;
 
--- 4. Display authors last name along with reversed format
+-- 4. Display authors last name along with reversed format.
 
 SELECT 
     author_lname AS forward, REVERSE(author_lname) AS backward
 FROM
     books; 
 
--- 5. Display authors full name in uppercase
+-- 5. Display authors full name in uppercase.
 
 SELECT 
     UCASE(CONCAT(author_fname, '  ', author_lname)) AS 'full name in caps'
 FROM
     books;
 
+-- 6.  Display the books title with there released year in single sentence.
+
+SELECT 
+    CONCAT(title,
+            ' ',
+            'was released in',
+            ' ',
+            released_year) As 'Books detail'
+FROM
+    books; 
 
 
 
