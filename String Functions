@@ -270,14 +270,14 @@ SELECT
 -- 3. Replace spaces in titles with '->'.
 
 SELECT 
-    REPLACE(title, ' ', '->') AS updated
+    REPLACE(title, ' ', '->') AS Title
 FROM
     books;
 
 -- 4. Display authors last name along with reversed format.
 
 SELECT 
-    author_lname AS forward, REVERSE(author_lname) AS backward
+    author_lname AS Forward, REVERSE(author_lname) AS Backward
 FROM
     books; 
 
@@ -299,6 +299,15 @@ SELECT
 FROM
     books;
 
+OR
+
+SELECT 
+    CONCAT(title,
+            ' was released in ',
+            released_year) AS 'Books detail'
+FROM
+    books;
+
 -- 7. Display books title and its character counts.   
 
 SELECT 
@@ -309,7 +318,7 @@ FROM
 -- 8. Display title with only 10 characters along with '...', authors full name comma seperated
       and there available stock data should display along with' in stock'.
       
-      select concat( substr(title,1,10),'...') as Title,
+      select concat( substr(title,1,10),'...') as 'Short Title',
       concat (author_fname,',',author_lname ) as Authors,
       concat(stock_quantity,' ', 'in stock')  as Quantity
 from books;
