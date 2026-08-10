@@ -306,6 +306,14 @@ SELECT
 FROM
     books;
 
+-- 8. Display title with only 10 characters along with '...', authors full name comma seperated
+      and there available stock data should display along with' in stock'.
+      
+      select concat( substr(title,1,10),'...') as Title,
+      concat (author_fname,',',author_lname ) as Authors,
+      concat(stock_quantity,' ', 'in stock')  as Quantity
+from books;
+
 
 
 
