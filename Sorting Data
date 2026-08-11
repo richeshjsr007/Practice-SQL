@@ -164,7 +164,7 @@ WHERE
     released_year LIKE '19%'
 ;
 
--- We can also use '_' as wildcard to give exact number for characters we are looking in the Result set.
+-- ** We can also use '_' as wildcard to give exact number for characters we are looking in the Result set.
 
 -- Example :-  Display title, author_fname, released_year from books table where author's first name is having 5 characters.
 
@@ -186,5 +186,13 @@ FROM
 WHERE
     author_fname LIKE '___id';
 
+-- ** We can also use '\' along with % sign if data contain any special characters.
+-- Example - Display title, author_fname, released_year from books table where title containing '%'.
 
+SELECT 
+    title, author_fname, released_year
+FROM
+    books
+WHERE
+    title LIKE '%\%%';
 
