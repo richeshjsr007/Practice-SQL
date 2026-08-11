@@ -140,7 +140,18 @@ ORDER BY title ASC
 LIMIT 2;
 
 -- 6. LIKE Operator (For better searching)
+-- USING - LIKE '%D%' -  means search for records where the column contains the letter 'D' anywhere inside the text (at the beginning, middle, or end).
+   The % symbol represents any number of characters surrounding it. ' % ' is used as WildCard.
 
+-- Example :- Display title, author's first name and release year from books where title contain ':'.
+
+SELECT 
+    title, author_fname, released_year
+FROM
+    books
+WHERE
+    title LIKE '%:%'
+;
 
 
 
