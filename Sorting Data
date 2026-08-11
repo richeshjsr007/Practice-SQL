@@ -8,4 +8,18 @@ INSERT INTO books
            ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
            ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
 
+-- Topic 1. DISTINCT (Sorting unique data from table)
 
+-- Example :-  'Display unique last names for Authors'
+
+SELECT DISTINCT
+    (author_lname)
+FROM
+    BOOKS;
+
+-- Example :- 'Display unique full names for Authors'
+
+SELECT DISTINCT
+    CONCAT(author_fname, ' ', author_lname)
+FROM
+    BOOKS;
