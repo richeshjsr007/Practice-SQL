@@ -67,7 +67,15 @@ FROM
     books
 ORDER BY 4;
 
+--  3. ORDER BY using MULTIPLE Columns 
 
+-- Display all records from the books table, ordered by author_fname and released year.
+
+SELECT 
+    *
+FROM
+    books
+ORDER BY author_fname, released_year;
 
 
 
