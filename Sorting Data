@@ -77,10 +77,26 @@ FROM
     books
 ORDER BY author_fname, released_year;
 
+OR
 
+-- Display title, author first name & released year from the books table, ordered by author first name and newest released year.
 
+SELECT 
+    title, author_fname, released_year
+FROM
+    books
+ORDER BY author_fname , released_year DESC;
 
+OR 
 
+-- 4. ORDER BY using Aliases
+-- Display Authors full name and sort by fullname .
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Authors
+FROM
+    books
+ORDER BY Authors;
 
 
 
