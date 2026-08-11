@@ -164,7 +164,7 @@ WHERE
     released_year LIKE '19%'
 ;
 
--- We can also use '_' as wildcard to give exact number for characters we are looking in the Result set 
+-- We can also use '_' as wildcard to give exact number for characters we are looking in the Result set.
 
 -- Example :-  Display title, author_fname, released_year from books table where author's first name is having 5 characters.
 
@@ -177,7 +177,7 @@ WHERE
 
 OR
 
--- Display title, author_fname, released_year from books table where author's first name is having 5 characters and ending with 'id'
+-- Display title, author_fname, released_year from books table where author's first name is having 5 characters and ending with 'id'.
 
 SELECT 
     title, author_fname, released_year
