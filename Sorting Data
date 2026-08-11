@@ -98,7 +98,7 @@ FROM
     books
 ORDER BY Authors;
 
--- 4. LIMIT (It controls the no. of rows in the result set)
+-- 4. Order by using LIMIT (It controls the no. of rows in the result set)
 -- Example :-  Display the first 8 records from the books table, sorted by their ID.
 
 SELECT 
@@ -118,12 +118,26 @@ ORDER BY released_year
 LIMIT 10
 ;
 
+OR
 
+SELECT 
+    *
+FROM
+    BOOKS
+ORDER BY book_id
+LIMIT 3,5
+;
+-- Explanation -  In above query ORDER BY book_id LIMIT 3,5 -  means skip the first 3 rows of the sorted results and display the next 5 records. 
+-- (This allows us to SLECT SUBSET in between grouping)
 
+-- 5. Order by using LIMIT and WHERE Clause (WHERE is used as filter)
+-- Display the first two records from the books table where the author's first name is 'Neil', sorted by title.
 
-
-
-
+SELECT * 
+FROM books 
+WHERE author_fname = 'Neil' 
+ORDER BY title ASC 
+LIMIT 2;
 
 
 
