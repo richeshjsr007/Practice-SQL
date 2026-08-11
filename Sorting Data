@@ -8,7 +8,7 @@ INSERT INTO books
            ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
            ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
 
--- Topic 1. DISTINCT (Sorting unique data from table)
+-- Topic 1. DISTINCT ( Display UNIQUE data from table)
 
 -- Example :-  'Display unique last names for Authors'
 
@@ -30,4 +30,28 @@ SELECT DISTINCT
     CONCAT(author_fname, ' ', author_lname) as 'Full name'
 FROM
     BOOKS;
+
+-- Topic 2. ORDER BY ( Sorting O/P data from table)
+
+-- Display all records from the books table, sorted by title.
+
+SELECT 
+    *
+FROM
+    books
+ORDER BY TITLE;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
