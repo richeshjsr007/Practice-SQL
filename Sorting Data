@@ -108,7 +108,15 @@ FROM
 ORDER BY BOOK_ID
 LIMIT 8;
 
+Example:-  Display the 10 earliest released books from the books table.
 
+SELECT 
+    *
+FROM
+    BOOKS
+ORDER BY released_year
+LIMIT 10
+;
 
 
 
