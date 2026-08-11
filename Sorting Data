@@ -41,7 +41,7 @@ FROM
     books
 ORDER BY TITLE;  
 
--- Another way - Display all records from the books table, ordered by title from Z to A 
+-- Another way - Display all records from the books table, ordered by title from Z to A.
 
 SELECT 
     *
@@ -49,7 +49,7 @@ FROM
     books
 ORDER BY title DESC;
 
--- Another way - Display all records from the books table, ordered by title  
+-- Another way - Display all records from the books table, ordered by title. 
 
 SELECT 
     *
@@ -57,7 +57,15 @@ FROM
     books
 ORDER BY 2;
 
--- Explaination -  ORDER BY '2' means order by '2nd Column'
+-- Explaination -  ORDER BY 2 - means order by '2nd Column from the SELECT query'
+
+OR 
+
+SELECT 
+    author_lname, stock_quantity, pages, title
+FROM
+    books
+ORDER BY 4;
 
 
 
