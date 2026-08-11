@@ -153,7 +153,16 @@ WHERE
     title LIKE '%:%'
 ;
 
+OR
+-- Display the book title, author's first name, and release year from the books table for all books released in the 1900s.
 
+SELECT 
+    title, author_fname, released_year
+FROM
+    books
+WHERE
+    released_year LIKE '19%'
+;
 
 
 
