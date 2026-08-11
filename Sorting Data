@@ -20,6 +20,14 @@ FROM
 -- Example :- 'Display unique full names for Authors'
 
 SELECT DISTINCT
-    CONCAT(author_fname, ' ', author_lname)
+    author_fname, author_lname
 FROM
     BOOKS;
+
+OR
+
+SELECT DISTINCT
+    CONCAT(author_fname, ' ', author_lname) as 'Full name'
+FROM
+    BOOKS;
+
