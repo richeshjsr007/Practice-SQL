@@ -41,8 +41,13 @@ FROM
     books
 ORDER BY TITLE;  
 
+-- Another way - Display all records from the books table, ordered by title from Z to A 
 
-
+SELECT 
+    *
+FROM
+    books
+ORDER BY title DESC;
 
 
 
