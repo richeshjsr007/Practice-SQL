@@ -241,3 +241,11 @@ FROM
     books
 ORDER BY stock_quantity
 LIMIT 3;  
+
+--6. Display title and authors last name from books table and sort by authors last and then by title.
+
+SELECT 
+    title, author_lname
+FROM
+    books
+ORDER BY author_lname , title;
