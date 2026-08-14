@@ -1,1 +1,17 @@
+-- Topic 1. COUNT
+-- Example 1 :- Find the total no. of books available in database 
+
+SELECT 
+    COUNT(*)
+FROM
+    books;
+
+O/P= 19
+
+-- Example 2 - How any unique author first name are there in table 
+
+SELECT 
+    COUNT(DISTINCT author_fname) AS 'fname count'
+FROM
+    books;
 
