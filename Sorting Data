@@ -249,3 +249,11 @@ SELECT
 FROM
     books
 ORDER BY author_lname , title;
+
+--7. Display 'My favorite author is' with authors last name alphabetically as 'Saying' and in Upper case.
+
+SELECT 
+    UCASE(CONCAT('My favorite author is ', author_lname)) AS Saying
+FROM
+    books
+ORDER BY Saying;
