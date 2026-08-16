@@ -8,14 +8,21 @@ FROM
 
 O/P= 19
 
--- Example 2 - How any unique author first name are there in table 
+-- Example 2:- Display count of author first name are there in table 
+
+SELECT 
+    COUNT(author_fname) AS 'fname count'
+FROM
+    books;
+
+-- Example 3:- How any unique author first name are there in table 
 
 SELECT 
     COUNT(DISTINCT author_fname) AS 'fname count'
 FROM
     books;
 
--- Example 3:-  Display count of books having 'the' in their title.
+-- Example 4:-  Display count of books having 'the' in their title.
 
 SELECT 
     COUNT(*)
@@ -23,3 +30,33 @@ FROM
     books
 WHERE
     title LIKE '%the%';
+
+-- Topic 2. GROUP BY (collapses multiple rows into a single summary row)
+--  Example 1:- Display count of books written by each authors by last name.
+
+SELECT 
+    author_lname, COUNT(title) AS count_of_books
+FROM
+    books
+GROUP BY author_lname;
+
+OR 
+
+SELECT 
+    author_lname, COUNT(title) AS count_of_books
+FROM
+    books
+GROUP BY author_lname
+ORDER BY count_of_books ;
+
+
+
+
+
+
+
+
+
+
+
+
