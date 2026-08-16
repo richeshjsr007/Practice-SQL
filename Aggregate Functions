@@ -15,3 +15,11 @@ SELECT
 FROM
     books;
 
+-- Example 3:-  Display count of books having 'the' in their title.
+
+SELECT 
+    COUNT(*)
+FROM
+    books
+WHERE
+    title LIKE '%the%';
