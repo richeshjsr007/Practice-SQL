@@ -88,10 +88,10 @@ SELECT
     COUNT(title) AS book_count
 FROM
     books
-GROUP BY author_fname , author_lname
+GROUP BY Author
 ;  
 
--- Topic 3:- SUB-QUERY 
+-- Topic 4:- SUB-QUERY 
 -- Example 1 :- What is the title of longest book from the collection.
 
 SELECT 
