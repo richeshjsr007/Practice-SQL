@@ -1,4 +1,4 @@
--- Topic 1. COUNT
+-- TOPIC 1. COUNT
 -- Example 1 :- Find the total no. of books available in database 
 
 SELECT 
@@ -31,7 +31,7 @@ FROM
 WHERE
     title LIKE '%the%';
 
--- Topic 2. GROUP BY (collapses multiple rows into a single summary row)
+-- TOPIC 2. GROUP BY (collapses multiple rows into a single summary row)
 --  Example 1:- Display count of books written by each authors by last name.
 
 SELECT 
@@ -49,7 +49,7 @@ FROM
 GROUP BY author_lname
 ORDER BY count_of_books ;
 
--- Topic 2. MIN & MAX ( used to get minimum or  maximum value from certain column)
+-- TOPIC 2. MIN & MAX ( used to get minimum or  maximum value from certain column)
 -- Example 1:- Earliest book realeased in which year?
 
 SELECT 
@@ -71,7 +71,7 @@ SELECT
 FROM
     books;  
 
--- Topic 3:- GROUP BY Multiple column
+-- TOPIC 3:- GROUP BY Multiple column
 -- Example :- Display total no. of books written by each authors
 
 SELECT 
@@ -91,7 +91,7 @@ FROM
 GROUP BY Author
 ;  
 
--- Topic 4:- SUB-QUERY 
+-- TOPIC 4:- SUB-QUERY 
 -- Example 1 :- What is the title of longest book from the collection.
 
 SELECT 
@@ -125,8 +125,26 @@ WHERE
         FROM
             books);  
 
-s
+-- TOPIC 5:- MIN/MAX with GROUP By 
+-- Example 1:- Find the year each author published their 1st book.
 
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Author,
+    MIN(released_year)
+FROM
+    books
+GROUP BY Author;
+
+-- Example 1:- Find the latest and earliest year each author published their books.
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Author,
+    MAX(released_year) AS latest_book,
+    MIN(released_year) AS earliest_book,
+    COUNT(*) AS books_written
+FROM
+    books
+GROUP BY Author;
 
 
 
