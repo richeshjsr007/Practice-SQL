@@ -84,7 +84,7 @@ LIMIT 1;
 OR 
 
 SELECT 
-    title
+    title, pages
 FROM
     books
 WHERE
@@ -92,6 +92,18 @@ WHERE
             MAX(pages)
         FROM
             books);
+
+-- Example 2:- which is the earliest released book from collection.
+
+SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year = (SELECT 
+            MIN(released_year)
+        FROM
+            books);  
 
 
 
