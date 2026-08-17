@@ -49,8 +49,27 @@ FROM
 GROUP BY author_lname
 ORDER BY count_of_books ;
 
+-- Topic 2. MIN & MAX ( used to get minimum or  maximum value from certain column)
+-- Example 1:- Earliest book realeased in which year?
 
+SELECT 
+    MIN(released_year)
+FROM
+    books;
 
+-- Example 2:- What is the maximum number of pages in any book?
+
+SELECT 
+MAX(pages) Longest_book
+FROM
+    books;  
+
+-- Example :- Find the lowest and highest alphabet author last name.
+
+SELECT 
+    MIN(author_lname), MAX(author_lname)
+FROM
+    books;
 
 
 
