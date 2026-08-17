@@ -71,6 +71,26 @@ SELECT
 FROM
     books;  
 
+-- Topic 3:- GROUP BY Multiple column
+-- Example :- Display total no. of books written by each authors
+
+SELECT 
+    author_fname, author_lname, COUNT(title) AS book_count
+FROM
+    books
+GROUP BY author_fname , author_lname
+;
+
+OR 
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Author,
+    COUNT(title) AS book_count
+FROM
+    books
+GROUP BY author_fname , author_lname
+;  
+
 -- Topic 3:- SUB-QUERY 
 -- Example 1 :- What is the title of longest book from the collection.
 
@@ -105,7 +125,7 @@ WHERE
         FROM
             books);  
 
-
+s
 
 
 
