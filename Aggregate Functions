@@ -64,13 +64,34 @@ MAX(pages) Longest_book
 FROM
     books;  
 
--- Example :- Find the lowest and highest alphabet author last name.
+-- Example 3:- Find the lowest and highest alphabet author last name.
 
 SELECT 
     MIN(author_lname), MAX(author_lname)
 FROM
-    books;
+    books;  
 
+-- Topic 3:- SUB-QUERY 
+-- Example 1 :- What is the title of longest book from the collection.
+
+SELECT 
+    title, pages AS pages
+FROM
+    books
+ORDER BY pages DESC
+LIMIT 1; 
+
+OR 
+
+SELECT 
+    title
+FROM
+    books
+WHERE
+    pages = (SELECT 
+            MAX(pages)
+        FROM
+            books);
 
 
 
