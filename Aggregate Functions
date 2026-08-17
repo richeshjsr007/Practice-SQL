@@ -1,4 +1,4 @@
--- TOPIC 1. COUNT
+-- TOPIC 1. COUNT ()
 -- Example 1 :- Find the total no. of books available in database 
 
 SELECT 
@@ -49,7 +49,7 @@ FROM
 GROUP BY author_lname
 ORDER BY count_of_books ;
 
--- TOPIC 2. MIN & MAX ( used to get minimum or  maximum value from certain column)
+-- TOPIC 2. MIN & MAX () ( used to get minimum or maximum value from certain column)
 -- Example 1:- Earliest book realeased in which year?
 
 SELECT 
@@ -125,7 +125,7 @@ WHERE
         FROM
             books);  
 
--- TOPIC 5:- MIN/MAX with GROUP By 
+-- TOPIC 5:- MIN/MAX () with GROUP By 
 -- Example 1:- Find the year each author published their 1st book.
 
 SELECT 
@@ -155,7 +155,7 @@ FROM
     books
 GROUP BY author;
 
--- TOPIC 6:- SUM with GROUP BY 
+-- TOPIC 6:- SUM () with GROUP BY 
 -- Example 1:- Total pages written by each authors
 
 SELECT 
@@ -183,6 +183,39 @@ SELECT
 FROM
     books
 GROUP BY author_fname , author_lname;
+
+-- TOPIC 7:- AVG () (calculates the mathematical average (mean) of a column of numbers)
+-- Example 1:- Find the average loan amount taken by each customer.
+
+SELECT 
+    customer_id, AVG(loan_amount)
+FROM
+    loans
+GROUP BY customer_id;
+
+-- Eample 2:- What is the average stock qunatity for the book released year with count.
+
+SELECT 
+    released_year, AVG(stock_quantity), COUNT(*)
+FROM
+    books
+GROUP BY released_year;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
