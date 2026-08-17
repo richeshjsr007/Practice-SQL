@@ -201,6 +201,29 @@ FROM
     books
 GROUP BY released_year;
 
+--- Aggreagte Functions Exercise ---
+
+-- Ex 1.:- Print the number of books. 
+
+SELECT 
+    COUNT(*)
+FROM
+    BOOKS;
+
+-- Ex 2:- What are the no. of books released in each year.
+
+SELECT 
+    released_year, COUNT(*)
+FROM
+    BOOKS
+GROUP BY released_year;
+
+-- Ex 3:- Display no. of books available in the stock.
+
+SELECT 
+    SUM(stock_quantity) AS Available_stock
+FROM
+    books;
 
 
 
