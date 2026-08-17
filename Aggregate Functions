@@ -135,7 +135,7 @@ FROM
     books
 GROUP BY Author;
 
--- Example 1:- Find the latest and earliest year each author published their books.
+-- Example 2:- Find the latest and earliest year each author published their books.
 
 SELECT 
     CONCAT(author_fname, ' ', author_lname) AS Author,
@@ -145,6 +145,34 @@ SELECT
 FROM
     books
 GROUP BY Author;
+
+-- Example 3:- Find the longest page count for each author
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Author,
+    MAX(pages)
+FROM
+    books
+GROUP BY author;
+
+-- TOPIC 6:- SUM with GROUP BY 
+-- Example 1:- Total pages written by each authors
+
+SELECT 
+    author_fname, author_lname,
+    SUM(pages)
+FROM
+    books
+GROUP BY author_fname, author_lname
+;
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Author,
+    SUM(pages)
+FROM
+    books
+GROUP BY Author
+;
 
 
 
