@@ -75,7 +75,7 @@ FROM
 -- Example :- Display total no. of books written by each authors
 
 SELECT 
-    author_fname, author_lname, COUNT(title) AS book_count
+    author_fname, author_lname, COUNT(*) AS book_count
 FROM
     books
 GROUP BY author_fname , author_lname
@@ -85,7 +85,7 @@ OR
 
 SELECT 
     CONCAT(author_fname, ' ', author_lname) AS Author,
-    COUNT(title) AS book_count
+    COUNT(*) AS book_count
 FROM
     books
 GROUP BY Author
