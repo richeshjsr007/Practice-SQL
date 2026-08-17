@@ -174,7 +174,15 @@ FROM
 GROUP BY Author
 ;
 
+Example 2:- What's the total book stock available for each author.
 
+SELECT 
+    author_fname,
+    author_lname,
+    SUM(stock_quantity) AS available_stock
+FROM
+    books
+GROUP BY author_fname , author_lname;
 
 
 
