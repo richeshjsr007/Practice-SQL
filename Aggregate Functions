@@ -225,7 +225,35 @@ SELECT
 FROM
     books;
 
+-- Ex 4:- Find the average release year for each authors.
 
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Authors,
+    AVG(released_year)
+FROM
+    books
+GROUP BY Authors;
+
+-- Ex 5:- Find full name of the author who wrote the longest book.
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Authors
+FROM
+    books
+ORDER BY pages DESC
+LIMIT 1;
+
+OR
+
+SELECT 
+    CONCAT(author_fname, ' ', author_lname) AS Authors
+FROM
+    books
+WHERE
+    pages = (SELECT 
+            MAX(pages)
+        FROM
+            books);
 
 
 
