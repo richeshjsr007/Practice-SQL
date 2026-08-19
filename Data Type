@@ -1,6 +1,8 @@
 -- Topic 1:- CHAR vs VARCHAR
 --  We use CHAR when the length is predictable and fixed. 
     "CHAR always uses the maximum space we set, filling empty slots with spaces."
+-- Example :-  'ZIPCODE', 'abbrevations'
 -- We use VARCHAR when the length is variable. It saves a massive amount of disk space.
    "VARCHAR shrinks to use only the exact space our text needs."
+-- Example :-  'Name', 'email id', 'address'
 
