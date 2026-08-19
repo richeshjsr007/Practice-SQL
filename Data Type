@@ -6,3 +6,11 @@
    "VARCHAR shrinks to use only the exact space our text needs."
 -- Example :-  'Name', 'email id', 'address'
 
+-- Let say we entering data 'RAM'
+-- CHAR(6) sees "RAM" (3 characters) and says: "I must fill my box." 
+   It adds 3 invisible spaces to the end.
+   It saves "RAM   " and uses all 6 bytes of storage.
+
+-- VARCHAR(6) sees "RAM" (3 characters) and says: "I will shrink to fit."
+   "I will shrink to fit." It saves just "RAM" and uses 4 bytes of storage 
+    (3 bytes for the letters + 1 extra byte to remember the length is 3).
