@@ -1,1 +1,4 @@
+-- Topic 1:- CHAR vs VARCHAR
+--  We use CHAR when the length is predictable and fixed.
+-- We use VARCHAR when the length is variable. It saves a massive amount of disk space.
 
