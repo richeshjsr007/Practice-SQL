@@ -82,6 +82,14 @@ VALUES ('Lulu', '1985-04-11', '9:45:10', '1985-04-11 9:45:10');
 INSERT INTO people (name, birthdate, birthtime, birthdt)
 VALUES ('Juan', '2020-08-15', '23:59:00', '2020-08-15 23:59:00');
 
+-- TOPIC 6 :- CURDATE, CURTIME, NOW
+
+-- CURDATE() :- Captures current CALENDAR DATE only.
+   FORMAT :- YYYY-MM-DD
+-- CURTIME() :- Captures current CLOCK TIME only.
+   FORMAT :- HH:MM:SS
+-- NOW() :-  Captures current complete snapshot of both DATE and TIME COMBINED.
+   FORMAT :- YYYY-MM-DD HH:MM:SS
 
 
 
