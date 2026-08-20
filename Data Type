@@ -17,5 +17,13 @@
 
 -- Topic 2:- INT, TINYINT, BIGINT, UNSIGNED, SIGNED
 
--- Topic 3:- DECIMAL (0.5 or 1.006) 
+-- Topic 3:- DECIMAL (0.7 = 1 or 1.004 = 1) 
+-- It store exact fixed-point numbers where precision is critical
+-- Let say DECIMAL(M, D) OR DECIMAL(5,2)
+-- M (Precision): The total number of digits allowed in the entire number (both sides of the decimal point combined).
+-- D (Scale): The number of digits allowed after the decimal point.
+-- Means if let say syntax says - DECIMAL(5,2) and value/ result is 999.99999
+-- So maximum value will be = 999.99 & minimum = -999.99
+-- This means the number can have 5 total digits, and exactly 2 of them must be after the decimal point.
+
 
