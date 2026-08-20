@@ -39,5 +39,6 @@
 -- O/P :- apple = 55.65
           melon = 34.56
           lemon = 5.65  
-
+-- So we can exceed the no. of character after decimal place and it will 'Truncate the data ' BUT if we exceed chara. before decimal
+   it will error out and will intsert the data .
 
