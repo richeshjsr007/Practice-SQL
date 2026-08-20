@@ -26,4 +26,18 @@
 -- So maximum value will be = 999.99 & minimum = -999.99
 -- This means the number can have 5 total digits, and exactly 2 of them must be after the decimal point.
 
+-- Example :- Create table products and columns - product and price 
+
+   CREATE TABLE products (
+    Product VARCHAR(10),
+    price DECIMAL(5 , 2 )
+   );
+
+   INSERT INTO PRODUCTS (product, price)
+  value ('apple, 55.647'),('melon', 34.558),('lemon', 5.645);
+
+-- O/P :- apple = 55.65
+          melon = 34.56
+          lemon = 5.65  
+
 
