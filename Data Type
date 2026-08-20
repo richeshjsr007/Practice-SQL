@@ -34,7 +34,7 @@
    );
 
    INSERT INTO PRODUCTS (product, price)
-  value ('apple, 55.647'),('melon', 34.558),('lemon', 5.645);
+  value ('apple, 55.645'),('melon', 34.56),('lemon', 5.648);
 
 -- O/P :- apple = 55.65
           melon = 34.56
