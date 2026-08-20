@@ -91,7 +91,7 @@ VALUES ('Juan', '2020-08-15', '23:59:00', '2020-08-15 23:59:00');
 -- NOW() :-  Captures current complete snapshot of both DATE and TIME COMBINED.
    FORMAT :- YYYY-MM-DD HH:MM:SS
 
-
+SELECT CURDATE(), CURTIME(), NOW();
 
 
 
