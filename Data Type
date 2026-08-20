@@ -1,31 +1,30 @@
 -- TOPIC 1:- CHAR vs VARCHAR
---  We use CHAR when the length is predictable and fixed. 
-    "CHAR always uses the maximum space we set, filling empty slots with spaces."
--- Example :-  'ZIPCODE', 'abbrevations'
--- We use VARCHAR when the length is variable. It saves a massive amount of disk space.
-   "VARCHAR shrinks to use only the exact space our text needs."
+   -- We use CHAR when the length is predictable and fixed. 
+      "CHAR always uses the maximum space we set, filling empty slots with spaces."
+   -- Example :-  'ZIPCODE', 'abbrevations'
+   -- We use VARCHAR when the length is variable. It saves a massive amount of disk space.
+      "VARCHAR shrinks to use only the exact space our text needs."
 -- Example :-  'Name', 'email id', 'address'
+   -- Let say we entering data 'RAM'
+   -- CHAR(6) sees "RAM" (3 characters) and says: "I must fill my box." 
+      It adds 3 invisible spaces to the end.
+      It saves "RAM   " and uses all 6 bytes of storage.
 
--- Let say we entering data 'RAM'
--- CHAR(6) sees "RAM" (3 characters) and says: "I must fill my box." 
-   It adds 3 invisible spaces to the end.
-   It saves "RAM   " and uses all 6 bytes of storage.
-
--- VARCHAR(6) sees "RAM" (3 characters) and says: "I will shrink to fit."
-   "I will shrink to fit." It saves just "RAM" and uses 4 bytes of storage 
-    (3 bytes for the letters + 1 extra byte to remember the length is 3).
+   -- VARCHAR(6) sees "RAM" (3 characters) and says: "I will shrink to fit."
+      "I will shrink to fit." It saves just "RAM" and uses 4 bytes of storage 
+       (3 bytes for the letters + 1 extra byte to remember the length is 3).
 
 -- Topic 2:- INT, TINYINT, BIGINT, UNSIGNED, SIGNED
 
 -- TOPIC 3:- DECIMAL (0.7 = 1 or 1.004 = 1) - (Stores EXACT numbers)
 
--- It store exact fixed-point numbers where precision is critical
--- Let say DECIMAL(M, D) OR DECIMAL(5,2)
--- M (Precision): The total number of digits allowed in the entire number (both sides of the decimal point combined).
--- D (Scale): The number of digits allowed after the decimal point.
--- Means if let say syntax says - DECIMAL(5,2) and value/ result is 999.99999
--- So maximum value will be = 999.99 & minimum = -999.99
--- This means the number can have 5 total digits, and exactly 2 of them must be after the decimal point.
+   -- It store exact fixed-point numbers where precision is critical
+   -- Let say DECIMAL(M, D) OR DECIMAL(5,2)
+   -- M (Precision): The total number of digits allowed in the entire number (both sides of the decimal point combined).
+   -- D (Scale): The number of digits allowed after the decimal point.
+   -- Means if let say syntax says - DECIMAL(5,2) and value/ result is 999.99999
+   -- So maximum value will be = 999.99 & minimum = -999.99
+   -- This means the number can have 5 total digits, and exactly 2 of them must be after the decimal point.
 
 -- Example :- Create table products and columns - product and price 
 
@@ -37,31 +36,31 @@
    INSERT INTO PRODUCTS (product, price)
   value ('apple, 55.645'),('melon', 34.56),('lemon', 5.648);
 
--- O/P :- apple = 55.65
-          melon = 34.56
-          lemon = 5.65  
--- So we can exceed the no. of character after decimal place and it will 'Truncate the data ' BUT if we exceed chara. before decimal
-   it will error out and will intsert the data .
+   -- O/P :- apple = 55.65
+             melon = 34.56
+             lemon = 5.65  
+   -- So we can exceed the no. of character after decimal place and it will 'Truncate the data ' BUT if we exceed chara. before decimal
+      it will error out and will intsert the data .
 
 -- TOPIC 4:- FLOAT & DOUBLE - (Stores approximate numbers) 
 
--- FLOAT can be accurate upto ~7 digits and requires 4 Byte Memory. Less precise than DOUBLE
--- DOUBLE can be accurate upto ~15 digits and requires 8 Byte Memory. Less precise than DECIMAL
--- NOTE :- If digit exceeds MYSQL will truncate the data for precise value.
+   -- FLOAT can be accurate upto ~7 digits and requires 4 Byte Memory. Less precise than DOUBLE
+   -- DOUBLE can be accurate upto ~15 digits and requires 8 Byte Memory. Less precise than DECIMAL
+   -- NOTE :- If digit exceeds MYSQL will truncate the data for precise value.
 
 -- TOPIC 5:- DATE & TIME - (DATE - Stores only the calendar date, & TIME - Stores the time of day ) 
 
--- DATE FORMAT - YYYY-MM-DD
-   Range -  1000-01-01 to 9999-12 -31
--- TIME FORMAT - HH:MM:SS (Hours:Minutes:Seconds)
-   Range -  -838:59:59 to 838:59:59 (In some cases 00:00:00 to 23:59:59 for 24hr day) 
+   -- DATE FORMAT - YYYY-MM-DD
+      Range -  1000-01-01 to 9999-12 -31
+   -- TIME FORMAT - HH:MM:SS (Hours:Minutes:Seconds)
+      Range -  -838:59:59 to 838:59:59 (In some cases 00:00:00 to 23:59:59 for 24hr day) 
 
 -- TOPIC 5:- DATETIME - ('YYYY-MM-DD HH:MM:SS') 
 
--- This data type used to store a combined calendar date and clock time together in a single column
--- It ignores Timezones 
--- Range - "1000-01-01 00:00:00 to 9999-12-31 23:59:59"
--- Summary - DATETIME acts like a literal snapshot photo of a calendar and a wall clock combined,
+   -- This data type used to store a combined calendar date and clock time together in a single column
+   -- It ignores Timezones 
+   -- Range - "1000-01-01 00:00:00 to 9999-12-31 23:59:59"
+   -- Summary - DATETIME acts like a literal snapshot photo of a calendar and a wall clock combined,
              it stays exactly the same no matter where you travel in the world.
 
 -- For practice - 
@@ -84,14 +83,17 @@ VALUES ('Juan', '2020-08-15', '23:59:00', '2020-08-15 23:59:00');
 
 -- TOPIC 6 :- CURDATE, CURTIME, NOW
 
--- CURDATE() :- Captures current CALENDAR DATE only.
-   FORMAT :- YYYY-MM-DD
--- CURTIME() :- Captures current CLOCK TIME only.
-   FORMAT :- HH:MM:SS
--- NOW() :-  Captures current complete snapshot of both DATE and TIME COMBINED.
-   FORMAT :- YYYY-MM-DD HH:MM:SS
+   -- CURDATE() :- Captures current CALENDAR DATE only.
+      FORMAT :- YYYY-MM-DD
+   -- CURTIME() :- Captures current CLOCK TIME only.
+      FORMAT :- HH:MM:SS
+   -- NOW() :-  Captures current complete snapshot of both DATE and TIME COMBINED.
+      FORMAT :- YYYY-MM-DD HH:MM:SS
 
 SELECT CURDATE(), CURTIME(), NOW();
+-- Let say insert new row in People table using CURDATE(), CURTIME() & NOW()
 
+INSERT INTO people (name, birthdate, birthtime, birthdt)
+VALUES ('Emmy', current_date(), curtime(), now());
 
 
