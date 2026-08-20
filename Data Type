@@ -51,13 +51,18 @@
 
 -- TOPIC 5:- DATE & TIME - (DATE - Stores only the calendar date, & TIME - Stores the time of day ) 
 
--- DATE FORMAT - YYYY-MM-DD / DD-MM-YYYY
+-- DATE FORMAT - YYYY-MM-DD
    Range -  1000-01-01 to 9999-12 -31
 -- TIME FORMAT - HH:MM:SS (Hours:Minutes:Seconds)
    Range -  -838:59:59 to 838:59:59 (In some cases 00:00:00 to 23:59:59 for 24hr day) 
 
+-- TOPIC 5:- DATETIME - ('YYYY-MM-DD HH:MM:SS') 
 
-
+-- This data type used to store a combined calendar date and clock time together in a single column
+-- It ignores Timezones 
+-- Range - "1000-01-01 00:00:00 to 9999-12-31 23:59:59"
+-- Summary - DATETIME acts like a literal snapshot photo of a calendar and a wall clock combined,
+             it stays exactly the same no matter where you travel in the world.
 
 
 
