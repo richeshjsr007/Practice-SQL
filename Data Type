@@ -45,6 +45,6 @@
 
 -- Topic 4:- FLOAT & DOUBLE - (Stores approximate numbers) 
 
--- FLOAT can be accurate upto ~7 digits and requires 4 Byte Memory. 
--- Where-as, DOUBLE can be accurate upto ~15 digits and requires 8 Byte Memory.
+-- FLOAT can be accurate upto ~7 digits and requires 4 Byte Memory. Less precise than DOUBLE
+-- DOUBLE can be accurate upto ~15 digits and requires 8 Byte Memory. Less precise than DECIMAL
 -- NOTE :- If digit exceeds MYSQL will truncate the data for precise value.
