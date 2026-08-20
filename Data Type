@@ -17,7 +17,8 @@
 
 -- Topic 2:- INT, TINYINT, BIGINT, UNSIGNED, SIGNED
 
--- Topic 3:- DECIMAL (0.7 = 1 or 1.004 = 1) 
+-- Topic 3:- DECIMAL (0.7 = 1 or 1.004 = 1) - (Stores EXACT numbers)
+
 -- It store exact fixed-point numbers where precision is critical
 -- Let say DECIMAL(M, D) OR DECIMAL(5,2)
 -- M (Precision): The total number of digits allowed in the entire number (both sides of the decimal point combined).
@@ -42,3 +43,6 @@
 -- So we can exceed the no. of character after decimal place and it will 'Truncate the data ' BUT if we exceed chara. before decimal
    it will error out and will intsert the data .
 
+-- Topic 4:- FLOAT & DOUBLE - (Stores approximate numbers) 
+
+-- FLOAT can be accurate upto ~7 digits & DOUBLE can be accurate upto ~15 digits
