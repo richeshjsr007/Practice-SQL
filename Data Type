@@ -1,4 +1,4 @@
--- Topic 1:- CHAR vs VARCHAR
+-- TOPIC 1:- CHAR vs VARCHAR
 --  We use CHAR when the length is predictable and fixed. 
     "CHAR always uses the maximum space we set, filling empty slots with spaces."
 -- Example :-  'ZIPCODE', 'abbrevations'
@@ -17,7 +17,7 @@
 
 -- Topic 2:- INT, TINYINT, BIGINT, UNSIGNED, SIGNED
 
--- Topic 3:- DECIMAL (0.7 = 1 or 1.004 = 1) - (Stores EXACT numbers)
+-- TOPIC 3:- DECIMAL (0.7 = 1 or 1.004 = 1) - (Stores EXACT numbers)
 
 -- It store exact fixed-point numbers where precision is critical
 -- Let say DECIMAL(M, D) OR DECIMAL(5,2)
@@ -43,8 +43,26 @@
 -- So we can exceed the no. of character after decimal place and it will 'Truncate the data ' BUT if we exceed chara. before decimal
    it will error out and will intsert the data .
 
--- Topic 4:- FLOAT & DOUBLE - (Stores approximate numbers) 
+-- TOPIC 4:- FLOAT & DOUBLE - (Stores approximate numbers) 
 
 -- FLOAT can be accurate upto ~7 digits and requires 4 Byte Memory. Less precise than DOUBLE
 -- DOUBLE can be accurate upto ~15 digits and requires 8 Byte Memory. Less precise than DECIMAL
 -- NOTE :- If digit exceeds MYSQL will truncate the data for precise value.
+
+-- TOPIC 5:- DATE & TIME - (DATE - Stores only the calendar date, & TIME - Stores the time of day ) 
+
+-- DATE FORMAT - YYYY-MM-DD / DD-MM-YYYY
+   Range -  1000-01-01 to 9999-12 -31
+-- TIME FORMAT - HH:MM:SS (Hours:Minutes:Seconds)
+   Range -  -838:59:59 to 838:59:59 (In some cases 00:00:00 to 23:59:59 for 24hr day) 
+
+
+
+
+
+
+
+
+
+
+
