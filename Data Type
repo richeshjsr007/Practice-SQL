@@ -193,7 +193,8 @@ FROM
      -> 11:55:40   
 
 -- Topic 10 :- TIMESTAMP -  It also combines DATE + TIME together with TimeZone (Shows result as per time zone)
-
+   
+   -- Range -  1st JAN 1970 till 19th JAN 20238 only 
 
 
 
