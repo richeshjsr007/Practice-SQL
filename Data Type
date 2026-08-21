@@ -185,7 +185,16 @@ FROM
 FROM
     LOANS;
 
-  
+  -- Topic 10 :- TIMEDIFF(time1, time2 ) - It basically substracts time - Used to find time -intervals
+
+     -- Example :- Let say Train started from station A at 08:30:35 and train reached station B just now, so how much time it took .
+       
+        SELECT TIMEDIFF(CURRENT_TIME(), '08:30:35');   
+     -> 11:55:40   
+
+
+
+
 
 
 
