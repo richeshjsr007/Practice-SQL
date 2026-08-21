@@ -97,6 +97,7 @@ INSERT INTO people (name, birthdate, birthtime, birthdt)
 VALUES ('Emmy', current_date(), curtime(), now());
 
 -- TOPIC 7 :- DATE Functions - DAYNAME(date), DAY(date) / DAYOFMONTH(date), DAYOFWEEK(date), DAYOFYEAR(date)
+
    -- DAYNAME(date) -  Returns the name of the weekday for date.
    -- MONTHNAME(date) - Returns the full name of the month for date.
    -- DAY(date) / DAYOFMONTH(date) - Returns the day of the month for date, in the range 1 to 31.
@@ -129,6 +130,14 @@ SELECT
 FROM
     people; 
 
+-- TOPIC 8 :- Date Formatting -  DATE_FORMAT(date, format)
+
+   -- %a - Abbreviated weekday name (Sun..Sat)
+   -- %b - Abbreviated month name (Jan..Dec)
+   -- %D - Day of the month with English suffix (0th, 1st, 2nd, 3rd, …)
+   -- %H - Hour (00..23) - 24 hour format
+   -- %M - Month name (January..December)
+   -- %r - Time, 12-hour (hh:mm:ss followed by AM or PM)
 
 
 
