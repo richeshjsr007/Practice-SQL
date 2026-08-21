@@ -116,6 +116,7 @@ SELECT
 FROM
     people;
 
+-- Other important functions -  hour(), minute(), second(), microsecond(), week(), year()
 
 
 
