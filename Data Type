@@ -169,7 +169,23 @@ FROM
 FROM
     repayments;
 
+-- Topic 10 :-  DATE_ADD(date,INTERVAL expr unit), DATE_SUB(date,INTERVAL expr unit)
 
+   -- DATE_ADD(date,INTERVAL expr unit) - Lets say someone took loan to calculat the Loan end date depending on duration.
+      
+      SELECT 
+    DATE_ADD(loan_date, INTERVAL 6 YEAR) AS LOAN_END_DATE
+FROM
+    LOANS;
+
+   -- DATE_SUB(date,INTERVAL expr unit) - 
+
+      SELECT 
+    DATE_SUB(loan_date, INTERVAL 6 YEAR) AS LOAN_END_DATE
+FROM
+    LOANS;
+
+  
 
 
 
