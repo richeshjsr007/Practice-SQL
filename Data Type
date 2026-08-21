@@ -96,4 +96,35 @@ SELECT CURDATE(), CURTIME(), NOW();
 INSERT INTO people (name, birthdate, birthtime, birthdt)
 VALUES ('Emmy', current_date(), curtime(), now());
 
+-- TOPIC 7 :- DATE Functions - DAYNAME(date), DAY(date) / DAYOFMONTH(date), DAYOFWEEK(date), DAYOFYEAR(date)
+   -- DAYNAME(date) -  Returns the name of the weekday for date.
+   -- MONTHNAME(date) - Returns the full name of the month for date.
+   -- DAY(date) / DAYOFMONTH(date) - Returns the day of the month for date, in the range 1 to 31.
+   -- DAYOFWEEK(date) - Returns the weekday index for date (1 = Sunday, 2 = Monday, …, 7 = Saturday).
+   -- DAYOFYEAR(date) - Returns the day of the year for date, in the range 1 to 366.
+
+-- Example :- Display the DAYNAME, DAYOFWEEK, DAYOFMONTH, DAYOFYEAR from date of birth of each people alomng with name .
+
+SELECT 
+    name,
+    birthdate,
+    DAYNAME(birthdate) as Day_name,
+    MONTHNAME(birthdate) as Month_name,
+    DAYOFWEEK(birthdate) as Day_week,
+    DAYOFMONTH(birthdate) as Day_month,
+    DAYOFYEAR(birthdate) as Day_year
+FROM
+    people;
+
+
+
+
+
+
+
+
+
+
+
+
 
