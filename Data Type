@@ -116,8 +116,18 @@ SELECT
 FROM
     people;
 
--- Other important functions -  hour(), minute(), second(), microsecond(), week(), year()
+-- TIME Functions -  hour(), minute(), second(), microsecond()
 
+-- Example :- Display Hour, minute and seconds along with name from peoples table.
+
+SELECT 
+    NAME,
+    DAY(birthdt),
+    HOUR(birthdt),
+    MINUTE(birthdt),
+    SECOND(birthdt)
+FROM
+    people; 
 
 
 
