@@ -192,10 +192,25 @@ FROM
         SELECT TIMEDIFF(CURRENT_TIME(), '08:30:35');   
      -> 11:55:40   
 
--- Topic 10 :- TIMESTAMP -  It also combines DATE + TIME together with TimeZone (Shows result as per time zone)
+-- Topic 11 :- TIMESTAMP -  It also combines DATE + TIME together with TimeZone (Shows result as per time zone)
    
    -- Range -  1st JAN 1970 till 19th JAN 20238 only 
+   -- CURRENT_TIMESTAMP =  This tells My SQL to feed the real time data as soon as row is created.
 
+   --  Lets say creating a table for timetable and column as Name and check-in and assign data type for check-in as TIMESATMP.
+       and feed data in it 
+
+       CREATE TABLE TIME_TABLE (
+    NAME VARCHAR(20),
+    CHECKIN TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('Ram');
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('tom');
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('tina');
 
 
 
