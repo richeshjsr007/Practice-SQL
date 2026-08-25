@@ -270,3 +270,20 @@ WHERE
 -- 2. Print just current date 
 
     SELECT CURDATE();
+
+-- 3. Print current day of the week (in number)
+
+      SELECT DAYOFWEEK(CURRENT_DATE());
+
+-- 4. Print current day for the week name.
+
+      SELECT DAYNAME(CURRENT_DATE());
+
+-- 5. Print the current day and time using format (yyyy/mm/dd)
+
+      SELECT DATE_FORMAT(CURRENT_TIMESTAMP, '%m/%d/%Y %H:%i:%s') AS formated;
+
+-- 6. Print teh current day and time only (Year month as suffix & just hours and minutes)
+
+      SELECT DATE_FORMAT(CURRENT_TIMESTAMP, '%M %D %H:%i') AS formated;
+    
