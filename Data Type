@@ -260,3 +260,4 @@ WHERE
     name = 'tim';
 
   --  So now coulmn Last_updated gets data as soons as any change is made to row 1 along with changes.
+
