@@ -261,3 +261,12 @@ WHERE
 
   --  So now coulmn Last_updated gets data as soons as any change is made to row 1 along with changes.
 
+--  Practice exercise --
+
+-- 1. Print current time 
+
+    SELECT CURRENT_TIME();
+
+-- 2. Print just current date 
+
+    SELECT CURDATE();
