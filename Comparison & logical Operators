@@ -1,5 +1,5 @@
 -- TOPIC 1. NOT EQUAL  ( != )
-   -- Example 1:- Print title for books from table not from year 2017.
+   -- Example 1:- Print title for books from table not released in 2017.
 
       SELECT 
     title
@@ -8,3 +8,11 @@ FROM
 WHERE
     released_year != 2017;
 
+   -- Example 2:- Print title & authors lastname for books not written by authors lastname as 'harris'.
+
+      SELECT 
+    title, author_lname
+FROM
+    books
+WHERE
+    author_lname != 'harris';
