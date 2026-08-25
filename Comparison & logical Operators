@@ -1,1 +1,10 @@
+-- TOPIC 1. NOT EQUAL  ( != )
+   -- Example 1:- Print title for books from table not from year 2017.
+
+      SELECT 
+    title
+FROM
+    books
+WHERE
+    released_year != 2017;
 
