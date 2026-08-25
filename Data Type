@@ -253,3 +253,10 @@ VALUES ('alina');
 
    -- Now lets update name for 'Tim' and see how does the data automatically gets updated in coulmn Last_updated.
 
+ UPDATE LOGIN 
+SET 
+    name = 'Tim david'
+WHERE
+    name = 'tim';
+
+  --  So now coulmn Last_updated gets data as soons as any change is made to row 1 along with changes.
