@@ -286,4 +286,16 @@ WHERE
 -- 6. Print teh current day and time only (Year month as suffix & just hours and minutes)
 
       SELECT DATE_FORMAT(CURRENT_TIMESTAMP, '%M %D %H:%i') AS formated;
-    
+
+-- 7. Create table name tweet_table. Columns - the tweet content, A username, Created time (This should be auto filled by SQL) and entre data.
+
+       CREATE TABLE Tweets_Table (
+    the_tweet_content VARCHAR(180),
+    Username CHAR(10),
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+;
+
+INSERT INTO tweets_table (the_tweet_content, Username )
+values ('India is democratic country, with diverse culture and religions. It has 29 states and have deserts, high peak mountains,
+ seas and forest', 'user@12345');
