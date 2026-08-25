@@ -195,7 +195,7 @@ FROM
 -- Topic 11 :- TIMESTAMP -  It also combines DATE + TIME together with TimeZone (Shows result as per time zone)
    
    -- Range -  1st JAN 1970 till 19th JAN 20238 only 
-   -- CURRENT_TIMESTAMP =  This tells My SQL to feed the real time data as soon as row is created.
+   -- CURRENT_TIMESTAMP =  This tells MySQL to feed the real time data as soon as row is created.
 
    --  Lets say creating a table for timetable and column as Name and check-in and assign data type for check-in as TIMESATMP.
        and feed data in it 
@@ -212,7 +212,44 @@ VALUES ('tom');
 INSERT INTO TIME_TABLE (NAME)
 VALUES ('tina');
 
+-- TOPIC 12 :- DEFAULT CURRENT_TIMESTAMP & UPDATE CURRENT_TIMESTAMP
 
+   --A. DEFAULT CURRENT_TIMESTAMP - This tell MySQL to make the assinged column as default and entre the data automatyically as soon as 
+                                    row is created.
 
+  CREATE TABLE TIME_TABLE (
+    NAME VARCHAR(20),
+    CHECKIN TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('Ram');
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('tom');
+INSERT INTO TIME_TABLE (NAME)
+VALUES ('tina');
+
+--  So in above query for inserting data we've just provided data for name column and checkin column data will be auto updated as
+    per assinged data type.
+
+    --B. UPDATE CURRENT_TIMESTAMP :- This tells MySQL to update the column's date and time automatically,
+                                     but ONLY for the specific row that you just edited or updated.
+
+   --  Lets create new table LOGIN and columns as Name, LoggedIn & Last_updated and assign data type for Last_updated as TIMESTAMP ON UPDATE CURRENT_TIMESTAMP.
+       and feed data in it 
+
+       CREATE TABLE LOGIN (
+    NAME VARCHAR(20),
+    CHECKIN TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Last_updated TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO login (NAME)
+VALUES ('Tim');
+INSERT INTO login (NAME)
+VALUES ('cook');
+INSERT INTO login (NAME)
+VALUES ('alina');
+
+   -- Now lets update name for 'Tim' and see how does the data automatically gets updated in coulmn Last_updated.
 
