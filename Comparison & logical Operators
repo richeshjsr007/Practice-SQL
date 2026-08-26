@@ -61,7 +61,16 @@ FROM
 WHERE
     title NOT LIKE '%the%';
 
+-- TOPIC 3. GREATER THAN ('>')
 
+   -- Example 1:- Print title and pages for those books, that has more tha 100 pages.
+
+      SELECT 
+    TITLE, PAGES
+FROM
+    books
+WHERE
+    PAGES > 100;
 
 
 
