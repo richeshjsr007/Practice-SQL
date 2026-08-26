@@ -72,9 +72,25 @@ FROM
 WHERE
     PAGES > 500;
 
+-- TOPIC 4.  LESS THAN OR EQUAL TO (<=)
 
+      -- Example 1:- Print title, pages and released year for books that got released on or before year 2000.
+   
+         SELECT 
+       TITLE, PAGES, released_year
+   FROM
+       books
+   WHERE
+       released_year <= 2000;
 
+      -- Example 2:- Print title, pages for books that got stocks left less than or equal to 150.
 
+          SELECT 
+    TITLE, PAGES
+FROM
+    books
+WHERE
+    stock_quantity <= 150;
 
 
 
