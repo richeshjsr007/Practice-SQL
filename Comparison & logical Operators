@@ -52,7 +52,14 @@ FROM
 WHERE
     title NOT LIKE '%e%';
 
+ -- Example 4:- Print the title of those books, that does not contain word 'the'.
 
+     SELECT 
+    title
+FROM
+    books
+WHERE
+    title NOT LIKE '%the%';
 
 
 
