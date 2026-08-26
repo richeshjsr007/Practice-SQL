@@ -16,3 +16,59 @@ FROM
     books
 WHERE
     author_lname != 'harris';
+
+-- TOPIC 2. NOT LIKE 
+   --  NOT LIKE is a text-filtering operator that excludes rows matching a specific search pattern while keeping everything else.
+   -- The NOT LIKE operator is used to filter database records by filtering out specific text patterns. It does the exact opposite
+      of the LIKE operator; it finds rows that do not match the text structure you provide.
+   -- It is heavily used alongside wildcards to eliminate unwanted data:
+      -- % (Percent sign): Represents zero, one, or multiple characters.
+      -- _ (Underscore): Represents a single, individual character.
+
+   --  Example 1:- Print the title of those books which doesn't have space in there title.
+
+       SELECT 
+    title
+FROM
+    books
+WHERE
+    title NOT LIKE '% %'; 
+
+--  Example 2:- Print the title of the books, where authors name does not starts with 'DA'.
+
+    SELECT 
+    title
+FROM
+    books
+WHERE
+    author_fname NOT LIKE 'DA%'; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
