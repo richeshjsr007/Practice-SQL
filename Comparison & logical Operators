@@ -92,7 +92,14 @@ FROM
 WHERE
     stock_quantity <= 150;
 
+      -- Example 2:- Print title, pages & year it was released for books that got released on or after 2010.
 
+         SELECT 
+    TITLE, PAGES, RELEASED_YEAR
+FROM
+    BOOKS
+WHERE
+    RELEASED_YEAR >= 2010;
 
 
 
