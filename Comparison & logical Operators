@@ -128,11 +128,17 @@ WHERE
 
 -- TOPIC 6.  Logical OR 
    -- It is used when atleast one condition should satisfy to retrive the data.
+   -- Example 1:- Print title, authors lastname and pages from the books whole title has more than 30 char. or author last name eggers.
 
+      SELECT 
+    title, author_fname, pages
+FROM
+    books
+WHERE
+    CHAR_LENGTH(title) > 30 or author_lname = 'eggers';
 
-
-
-
+-- TOPIC 7.  BETWEEN
+   -- The SQL BETWEEN operator filters data that falls within a specific range, including both the start and end values.
 
 
 
