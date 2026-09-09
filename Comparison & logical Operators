@@ -103,7 +103,7 @@ WHERE
 
 -- TOPIC 5.  Logical AND 
    -- It is used when more than one condition is used to retrive the data.
-   --  Example :- Print title, author_lname and released year for the books who's authors last name is gaiman, released year
+   --  Example 1:- Print title, author_lname and released year for the books who's authors last name is gaiman, released year
                   is greater than 2010 and title contains "Myth".
 
        SELECT 
@@ -117,8 +117,14 @@ WHERE
 
 --  IMP-  Alsways remember both LEFT AND RIGHT both should be TRUE only then query will work and give result.
 
+    -- Example 3:- Print title, authors lastname and pages from the books whole title has more than 20 char. and pages more than 550.
 
-
+       SELECT 
+    title, author_fname, pages
+FROM
+    books
+WHERE
+    CHAR_LENGTH(title) >= 20 AND pages > 550;
 
 
 
