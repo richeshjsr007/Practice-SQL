@@ -102,7 +102,7 @@ WHERE
     RELEASED_YEAR >= 2010;
 
 -- TOPIC 5.  Logical AND 
-   -- It is used when more than one condition is used to retrive the data.
+   -- It is used when more than one condition need to satisfy to retrive the data.
    --  Example 1:- Print title, author_lname and released year for the books who's authors last name is gaiman, released year
                   is greater than 2010 and title contains "Myth".
 
@@ -126,6 +126,8 @@ FROM
 WHERE
     CHAR_LENGTH(title) >= 20 AND pages > 550;
 
+-- TOPIC 6.  Logical OR 
+   -- It is used when atleast one condition should satisfy to retrive the data.
 
 
 
