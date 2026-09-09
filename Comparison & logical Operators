@@ -115,7 +115,7 @@ WHERE
         AND released_year > 2010
         AND TITLE LIKE '%Myth%';
 
-
+--  IMP-  Alsways remember both LEFT AND RIGHT both should be TRUE only then query will work and give result.
 
 
 
