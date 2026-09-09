@@ -72,7 +72,7 @@ FROM
 WHERE
     PAGES > 500;
 
--- TOPIC 4.  LESS THAN OR EQUAL TO (<=)
+-- TOPIC 4.  LESS THAN OR EQUAL TO & GREATER THAN OR EQUAL (<= / >=)
 
       -- Example 1:- Print title, pages and released year for books that got released on or before year 2000.
    
@@ -101,7 +101,18 @@ FROM
 WHERE
     RELEASED_YEAR >= 2010;
 
+-- TOPIC 5.  Logical AND 
+   -- It is used when more than one condition is used to retrive the data.
+   --  Example :- Print title, author_lname and released year for the books who's authors last name is gaiman and released year
+                  is greater than 2010.
 
+       SELECT 
+    title, author_lname, released_year
+FROM
+    books
+WHERE
+    author_lname = 'Gaiman'
+        AND released_year > 2010;
 
 
 
