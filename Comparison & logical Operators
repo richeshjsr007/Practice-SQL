@@ -244,3 +244,17 @@ WHERE
     END AS Type
 FROM
     books;
+
+   -- Example 2: Write an SQL query to display the loan ID, customer ID, and loan amount, along with a custom column named "Type" 
+                 that classifies loans as 'High Ticket' if the amount is 500,000 or greater, and 'Small Ticket' otherwise.
+
+     SELECT 
+    loan_id,
+    customer_id,
+    loan_amount,
+    CASE
+        WHEN loan_amount >= '500000' THEN 'High Ticket'
+        ELSE 'Small Ticket'
+    END Type
+FROM
+    loans;
