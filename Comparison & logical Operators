@@ -174,3 +174,12 @@ FROM
     PEOPLE
 WHERE
     YEAR(BIRTHDATE) < '2025'; 
+
+    -- Example 3: Display details for the persons who was born after 9am.  
+
+        SELECT 
+    *
+FROM
+    PEOPLE
+WHERE
+    HOUR(birthtime) > '09:00:00';  
