@@ -183,3 +183,13 @@ FROM
     PEOPLE
 WHERE
     HOUR(birthtime) > '09:00:00';  
+
+  -- Example 4: Diplay details for the peoples who was born between 8am and 2pm
+
+  SELECT 
+    *
+FROM
+    people
+WHERE
+    birthtime BETWEEN CAST('08:00:00' AS TIME) AND CAST('14:00:00' AS TIME);
+(NOTE: Using CAST function is technincally correct)
