@@ -193,3 +193,39 @@ FROM
 WHERE
     birthtime BETWEEN CAST('08:00:00' AS TIME) AND CAST('14:00:00' AS TIME);
 (NOTE: Using CAST function is technincally correct)
+
+-- TOPIC 9.  IN & NOT IN operator
+   -- Example 1: Write an SQL query to retrieve all books released in the years 2000, 1999, 2013, or 2016.
+
+  SELECT 
+    *
+FROM
+    books
+WHERE
+    released_year IN ('2000' , '1999', '2013', '2016');
+-- Example 2: Write an SQL query to retrieve all books that was not released in the years 2000, 1999, 2013, or 2016.
+ SELECT 
+    *
+FROM
+    books
+WHERE
+    released_year NOT IN ('2000' , '1999', '2013', '2016');
+
+-- TOPIC 10.  Modulus % (Used to retrive EVEN & ODD data)
+   -- Example 1: write query to retrive all the data from the books that was released after year 2000 and are odd year 
+SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year >= '2000'
+        AND released_year % 2 = 1;
+
+-- Example 2: write query to retrive all the data from the books that was released after year 2000 and are even year 
+SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year >= '2000'
+        AND released_year % 2 = 0;
