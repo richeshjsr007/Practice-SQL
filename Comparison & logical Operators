@@ -137,10 +137,10 @@ FROM
 WHERE
     CHAR_LENGTH(title) > 30 or author_lname = 'eggers';
 
--- TOPIC 7.  BETWEEN
+-- TOPIC 7.  BETWEEN & NOT BETWEEN
    -- The SQL BETWEEN operator filters data that falls within a specific range, including both the start and end values.
-
-   -- Example: Display title and author's first name from the books that got released between year 1999 and 2005
+      Where as NOT BETWEEN exclude all the data within given range.
+   -- Example 1: Display title and author's first name from the books that got released between year 1999 and 2005
    SELECT 
     title, author_fname
 FROM
@@ -148,6 +148,12 @@ FROM
 WHERE
     released_year BETWEEN 1999 AND 2005;
 
-
+   -- Example 1: Display title and author's first name from the books that got released before 1999 and after 2005
+   SELECT 
+    title, released_year
+FROM
+    books
+WHERE
+    released_year NOT BETWEEN 2001 AND 2005;
 
 
