@@ -156,4 +156,12 @@ FROM
 WHERE
     released_year NOT BETWEEN 2001 AND 2005;
 
+-- TOPIC 8.  Comparing Dates
+   -- Example 1: Display details for the persons who was born before year 2005
 
+SELECT 
+    *
+FROM
+    people
+WHERE
+    birthdate < '2005-01-01';
