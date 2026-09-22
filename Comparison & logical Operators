@@ -140,7 +140,13 @@ WHERE
 -- TOPIC 7.  BETWEEN
    -- The SQL BETWEEN operator filters data that falls within a specific range, including both the start and end values.
 
-
+   -- Example: Display title and author's first name from the books that got released between year 1999 and 2005
+   SELECT 
+    title, author_fname
+FROM
+    books
+WHERE
+    released_year BETWEEN 1999 AND 2005;
 
 
 
