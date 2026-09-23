@@ -270,3 +270,13 @@ FROM
 WHERE
     author_fname IS NULL
         OR author_lname IS NULL;   
+
+OR  Write query to retrive all the data from books where author last name or first name is not NULL.
+
+  SELECT 
+    *
+FROM
+    books
+WHERE
+    author_fname IS NOT NULL
+        OR author_lname IS NOT NULL;
