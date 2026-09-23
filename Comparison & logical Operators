@@ -295,3 +295,64 @@ when 23 then 'PremChand'
 when 24 then 'Wanderer'
 END
 WHERE book_id in (23,24);
+
+-- PRACTICE EXERCISE 
+-- 1. Write query to retrive all books released before 1980.
+SELECT * from books
+where released_year < 1980;
+
+-- /2. Write query to retrive all books written by eggers or chabon.
+select * from books 
+where author_lname in ('eggers', 'chabon')
+or
+author_fname in ('eggers', 'chabon');
+
+-- /3. Write query to retrive all books written by Lahiri and released after 2000.
+select * from books
+where (author_lname = 'Lahiri'or author_fname = 'Lahiri')
+AND released_year > 2000;
+
+-- /4. Write query to retrive all books with page count between 100 and 200.
+select * from books
+where pages between '100' and '200';
+
+select * from books
+where pages >=100
+AND pages <=200;
+
+-- /5. Write query to retrive all books whose author_lname starts either with C or S.
+select * from books
+where author_lname like 'c%' 
+or author_lname like 's%';
+
+select title, author_lname
+from books
+where substring(author_lname,1,1) in ('c','s');
+
+-- /6. Write a query to display the title and author_lname of all books. Include a new column called type
+that categories each book based on its title:If the title contains the word "stories", categorize it as 'short stories'.
+If the title contains "just kid" or "A heartbreaking work", categorize it as 'memoir'.For all other books, categorize them as 'Novel'.
+
+select title, author_lname,
+case WHEN title like '%stories%' then 'short stories'
+WHEN title like ('%just kid%') OR title like ( '%A heartbreaking work%') then 'memoir'
+ELSE 'Novel'
+END as type
+from books;
+
+-- /7. Write a SQL query to display each author's first name (author_fname) and last name (author_lname),
+along with a column called COUNT that shows how many books they have written. If an author has written exactly 1 book,
+display '1 book'. If they have written more or fewer, display the number followed by the word 'books' (e.g., '3 books').
+Group the results by author.
+
+select * from books;
+select author_fname, author_lname, COUNT(*) as count
+from books
+group by author_fname, author_lname;
+
+select author_fname, author_lname, 
+CASE WHEN COUNT(*)=1 THEN '1 book'
+ELSE concat(COUNT(*),' books')
+END AS COUNT
+from books
+group by author_fname, author_lname;
