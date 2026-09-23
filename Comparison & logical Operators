@@ -258,3 +258,15 @@ FROM
     END Type
 FROM
     loans;
+
+-- TOPIC 11. IS NULL & NOT NULL ( Used to retrive data from table where we've data as NULL or NOT NULL(means having data))
+
+   -- Example 1: Write query to retrive all the data from books where author last name or first name is NULL.
+
+   SELECT 
+    *
+FROM
+    books
+WHERE
+    author_fname IS NULL
+        OR author_lname IS NULL;   
