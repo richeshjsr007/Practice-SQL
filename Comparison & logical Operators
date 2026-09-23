@@ -280,3 +280,18 @@ FROM
 WHERE
     author_fname IS NOT NULL
         OR author_lname IS NOT NULL;
+
+-- BONUS: Let say we need to update data in the NULL columns: 
+          Either write sperate statement for each column or 
+          Else use CASE Function to update using single statement
+
+UPDATE books 
+SET author_fname = CASE book_id
+when 23 then 'Munshi'
+when 24 then 'DG'
+END,
+author_Lname = CASE book_id
+when 23 then 'PremChand'
+when 24 then 'Wanderer'
+END
+WHERE book_id in (23,24);
