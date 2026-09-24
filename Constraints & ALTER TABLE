@@ -18,3 +18,19 @@ value ('DON', 16);
 CREATE TABLE palindromes (
   word VARCHAR(100) CHECK(REVERSE(word) = word)
 );
+
+-- Topic. 3: MULTIPLE Constraint: Means applying more than one database rule to a single column or table to ensure the data is perfectly clean,
+             accurate, and secure
+
+Example: -  create a table name contact with columns name and mobile_number. Also for mobile_number column constraint is that it should
+            not be blank, it should be Unique and should be of 10 character only.
+
+CREATE TABLE contact(
+Name varchar(15) NOT NULL,
+Mobile_number VARCHAR(10) NOT NULL UNIQUE CHECK (CHAR_LENGTH(Mobile_number) = 10) 
+);
+
+INSERT INTO CONTACT (name, mobile_number)
+value ('Ram', 9876543201);
+
+
