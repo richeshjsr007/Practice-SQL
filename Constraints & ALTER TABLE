@@ -1,3 +1,15 @@
 -- Topic. 1: UNIQUE Constrain: The UNIQUE constraint ensures that all values in a column are completely different from one another.
 -- Topic. 2: CHECK Constrain: The CHECK constraint is a tool that limits the values allowed in a column based on a specific condition.
              It acts like a strict filter: whenever you try to insert or update a row, the database checks your condition.
+  create table author (
+autor_name varchar(15),
+age int check (age > 18)
+);
+desc AUTHOR;
+
+INSERT into author (autor_name, age)
+value ('David', 23);
+
+-- Below query violates the rule.
+INSERT into author (autor_name, age)
+value ('DON', 16);
