@@ -13,3 +13,8 @@ value ('David', 23);
 -- Below query violates the rule.
 INSERT into author (autor_name, age)
 value ('DON', 16);
+
+-- Bonus: 
+CREATE TABLE palindromes (
+  word VARCHAR(100) CHECK(REVERSE(word) = word)
+);
