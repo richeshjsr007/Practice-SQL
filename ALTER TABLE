@@ -14,3 +14,17 @@ Topic. 2: DROP Column : ALTER TABLE
 
 ALTER TABLE OFFICE 
 DROP COUNTRY;
+
+Topic. 2: RENAME TABLE / COLUMN
+
+-- Let say need to rename TABLE NAME 
+
+ -- Two ways: 
+    1. RENAME TABLE OFFICE TO OFC_ADDRESS;
+    2. alter table OFC_ADDRESS
+       RENAME to office;
+
+--  Rename COLUMN 
+
+    ALTER TABLE OFFICE
+    rename column office_name to office;
