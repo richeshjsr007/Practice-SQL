@@ -42,7 +42,7 @@ ALTER TABLE OFFICE
 MODIFY COLUMN address varchar(100) default 'unknown';
 -- so if we skip address column it will auto fill with defined default value.
 
--- Let say we need to rename as well as change teh defination / change the data type (use CHANGE)
+-- Let say we need to rename as well as change the defination / change the data type (use CHANGE)
 ALTER TABLE OFFICE
 CHANGE office OFC_NAME varchar(100) default 'Infotech';
 
