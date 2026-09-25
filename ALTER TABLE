@@ -28,3 +28,21 @@ Topic. 2: RENAME TABLE / COLUMN
 
     ALTER TABLE OFFICE
     rename column office_name to office;
+
+Topic. 3: MODIFY COLUMN 
+
+-- Let say we need to modify the data type for any column of a table 
+
+ALTER TABLE OFFICE 
+MODIFY COLUMN office varchar(100);
+
+-- So previously it was VARCHAR(20) AND NOT NULL
+OR
+ALTER TABLE OFFICE
+MODIFY COLUMN address varchar(100) default 'unknown';
+-- so if we skip address column it will auto fill with defined default value.
+
+
+
+
+
