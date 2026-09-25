@@ -1,0 +1,9 @@
+Adding Column:  ALTER TABLE 
+                ADD COLUMN   
+-- As statement suggest it is used for adding column.
+--Example: Add city and country column to table 
+
+ALTER TABLE OFFICE
+ADD COLUMN CITY VARCHAR(30) NOT NULL,
+ADD column COUNTRY varchar(30) NOT NULL;
+
