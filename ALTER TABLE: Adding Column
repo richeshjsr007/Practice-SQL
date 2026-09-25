@@ -1,2 +1,3 @@
 Adding Column:  ALTER COLUMN TABLE 
                 ADD COLUMN   
+-- As statement suggest it is used for adding column.
