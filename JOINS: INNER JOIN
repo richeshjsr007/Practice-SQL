@@ -1,4 +1,4 @@
-Topic. 1: CROSS JOIN
+Topic. 1: INNER JOIN
 -- Example. 1: write query to display total amount spent by each customer.
 
 SELECT customer_id, first_name, sum(amount) AS total_spent
