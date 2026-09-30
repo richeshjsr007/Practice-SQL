@@ -9,3 +9,13 @@ ON
 c.id = o.customer_id
 group by customer_id, first_name
 ;
+
+--  Example. 2: Write query to display customer_id, first name, order date and amount.
+
+SELECT customer_id, first_name, order_date, amount
+from customers c
+JOIN 
+orders O
+ON
+c.id = o.customer_id
+;
