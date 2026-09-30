@@ -49,5 +49,23 @@ CHANGE office OFC_NAME varchar(100) default 'Infotech';
 insert into  office (phone_number,address, city)
 value (9989965678,'delhi heights', 'Goa') ;
 
+Topic. 4: ALTER TABLE: CONSTRAINT
+-- Lets say we've created a table with certail constraint and now wants to remove that constraint.
+--Example: we've create a table Houses with constraint that will check sell price shouldk be greater than purchase price.
+CREATE TABLE Houses (
+Owner_ID int auto_increment primary key,
+Purchase_price int NOT NULL,
+Sell_price int NOT NULL,
+constraint sell_price_purchase_price check (sell_price>purchase_price)
+);
+-- Now remove constraint 
 
+ALTER TABLE houses
+DROP constraint sell_price_purchase_price;
+
+-- Now again we want to add constraint (Also, before adding contraint do check if the existing data in table if violates the check,
+update/remoev it and then add constraint )
+
+ALTER TABLE houses
+ADD constraint sell_price_purchase_price CHECK(sell_price> purchase_price);
 
