@@ -1,5 +1,5 @@
 Topic. 1: INNER JOIN
---  Example. 2: Write query to display customer_id, first name, order date and amount.
+--  Example. 1: Write query to display customer_id, first name, order date and amount.
 
 SELECT customer_id, first_name, order_date, amount
 from customers c
@@ -8,6 +8,16 @@ orders O
 ON
 c.id = o.customer_id
 ;
+
+-- Example. 2: Write query to display order details for customer name george michael 
+
+select * from orders O
+inner join 
+customers c
+on c.id = O.customer_id
+where customer_id = 2
+;
+
 
 Topic. 2: INNER JOIN with GROUP BY
 -- Example. 2: write query to display total amount spent by each customer.
