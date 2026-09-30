@@ -1,1 +1,41 @@
-Topic. 1: FOREIGN KEY
+Topic. 1: FOREIGN KEY -  It defines relationship between two table
+
+Create database ECOMMERCE;
+use ecommerce;
+
+create table customers(
+id int primary key auto_increment,
+first_name varchar(50),
+last_name varchar(50),
+email varchar(50)
+);
+
+create table orders(
+id int primary key auto_increment,
+order_date date,
+amount decimal(8,2),
+customer_id int,
+foreign key (customer_id) references customers(id)
+);
+
+insert into customers(first_name, last_name, email)
+values ('Boy','George','george@gmail.com'),
+('george','michael','gm@gmail.com'),
+('david','bowie','david@gmail.com'),
+('blue','steele','blue@gmail.com'),
+('bette','davis','bette@aol.com')
+;
+
+insert into orders (order_date, amount, customer_id)
+values ('2016-02-10',99.99,1),
+('2017-11-11',35.50,1),
+('2014-12-12',800.67,2),
+('2015-01-03',12.50,2),
+('1999-04-11',450.25,5)
+;
+-- So in above order table 'customer_id' column is used as FOREIGN KEY which is references to 'id' column in customers table.
+   Now whenever data is inserted in order table it will refer to customers table for customer_id and won't allow to entre data if customer_id is 
+   not available in customers table.
+
+insert into orders (order_date, amount, customer_id)
+values ('2016-02-10',99.99,21); 
