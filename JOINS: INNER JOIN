@@ -1,15 +1,4 @@
 Topic. 1: INNER JOIN
--- Example. 1: write query to display total amount spent by each customer.
-
-SELECT customer_id, first_name, sum(amount) AS total_spent
-from customers c
-JOIN 
-orders O
-ON
-c.id = o.customer_id
-group by customer_id, first_name
-;
-
 --  Example. 2: Write query to display customer_id, first name, order date and amount.
 
 SELECT customer_id, first_name, order_date, amount
@@ -18,4 +7,16 @@ JOIN
 orders O
 ON
 c.id = o.customer_id
+;
+
+Topic. 2: INNER JOIN with GROUP BY
+-- Example. 2: write query to display total amount spent by each customer.
+
+SELECT customer_id, first_name, sum(amount) AS total_spent
+from customers c
+JOIN 
+orders O
+ON
+c.id = o.customer_id
+group by customer_id, first_name
 ;
