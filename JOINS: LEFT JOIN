@@ -31,3 +31,13 @@ ON
 c.id = o.customer_id
 group by first_name
 ;
+ANOTEHR WAY 
+
+SELECT first_name, ifnull(sum(amount),0) AS total_spent, count(o.id) as count_of_order
+from customers c
+LEFT JOIN 
+orders O
+ON
+c.id = o.customer_id
+group by first_name
+;
