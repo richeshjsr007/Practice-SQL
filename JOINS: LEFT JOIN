@@ -29,5 +29,5 @@ LEFT JOIN
 orders O
 ON
 c.id = o.customer_id
-group by customer_id, first_name
+group by first_name
 ;
