@@ -19,3 +19,6 @@ customers c
 ON
 o.customer_id = c.id
 ;
+
+Topic. 2: LEFT JOIN with GROUP BY
+-- Example. 1:
