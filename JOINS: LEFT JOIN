@@ -2,7 +2,7 @@ Topic. 1: LEFT JOIN (Also called a LEFT OUTER JOIN)
       -- It returns all rows from the left table and the matching rows from the right table, putting NULL values where there is no match.
 -- Example. 1: Write query to display all the customer first and last name, order date and amount.
 
-SELECT customer_id, first_name, last_name order_date, amount
+SELECT first_name, last_name order_date, amount
 from customers c
 LEFT JOIN 
 orders O
