@@ -9,3 +9,13 @@ orders O
 ON
 c.id = o.customer_id
 ;
+
+-- Example. 1: Write query to display all the order date, amount, customer first and last name.
+
+SELECT order_date, amount, first_name, last_name
+from orders o
+LEFT JOIN 
+customers c
+ON
+o.customer_id = c.id
+;
