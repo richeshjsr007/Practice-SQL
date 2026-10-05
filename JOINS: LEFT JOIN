@@ -21,4 +21,13 @@ o.customer_id = c.id
 ;
 
 Topic. 2: LEFT JOIN with GROUP BY
--- Example. 1:
+-- Example. 1: write query to display total amount spent and orders placed by each customer.
+
+SELECT first_name, sum(amount) AS total_spent, count(o.id) as count_of_order
+from customers c
+LEFT JOIN 
+orders O
+ON
+c.id = o.customer_id
+group by customer_id, first_name
+;
