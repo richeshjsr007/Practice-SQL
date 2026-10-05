@@ -1,1 +1,2 @@
-Topic. 1: LEFT JOIN
+Topic. 1: LEFT JOIN (Also called a LEFT OUTER JOIN)
+      -- It returns all rows from the left table and the matching rows from the right table, putting NULL values where there is no match.
