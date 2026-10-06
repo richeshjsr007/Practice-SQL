@@ -1,0 +1,3 @@
+Topic. 1: RIGHT JOIN  (also called RIGHT OUTER JOIN)
+-- All records from the right table and the matched records from the left table.
+  If there is no match, the result will contain NULL values for all columns of the left table.
