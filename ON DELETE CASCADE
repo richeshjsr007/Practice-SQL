@@ -1,0 +1,3 @@
+Topic.: ON DELETE CASCADE - is a setting applied to a Foreign Key constraint. It acts as a safety chain between two linked tables
+     -- It means: "If a row in the parent table is deleted, automatically delete all matching rows in the child table."
+
