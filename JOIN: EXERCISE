@@ -1,4 +1,4 @@
-Q1.: Write schema to create tables Students having columns - "id", & "first_name" and table papers havinbg columns - "title", "grade", & "student_id"
+-- Q1.: Write schema to create tables Students having columns - "id", & "first_name" and table papers havinbg columns - "title", "grade", & "student_id"
 
 Create database SCHOOL;
 USE SCHOOL;
@@ -24,3 +24,9 @@ INSERT INTO papers (student_id, title, grade ) VALUES
 (2, 'Russian Lit Through The Ages', 94),
 (2, 'De Montaigne and The Art of The Essay', 98),
 (4, 'Borges and Magical Realism', 89);
+
+-- Q2.: Write query to display first name, title, & grade.
+
+select first_name, title, grade from students S
+inner join papers P
+ON s.id = p.student_id;
