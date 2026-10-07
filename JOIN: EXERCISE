@@ -32,9 +32,17 @@ inner join papers P
 ON s.id = p.student_id
 order by grade DESC;
 
---  Q3.: Write a query to display a list of all students alongside the titles and grades of their papers. Even if they have not submitted any papers.
+-- Q3.: Write a query to display a list of all students alongside the titles and grades of their papers. Even if they have not submitted any papers.
 
 select first_name, title, grade from students S
+LEFT join papers P
+ON s.id = p.student_id
+;
+
+-- Q4.: Write a query to display a list of all students alongside the titles and grades of their papers. Even if they have not submitted any papers.
+        Also, use "missing" for NULL value for Title and '0' for grade column.
+
+select first_name, ifnull(title, 'MISSING'), ifnull(grade, '0') from students S
 LEFT join papers P
 ON s.id = p.student_id
 ;
