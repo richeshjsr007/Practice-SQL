@@ -1,3 +1,14 @@
 Topic. 1: RIGHT JOIN  (also called RIGHT OUTER JOIN)
 -- All records from the right table and the matched records from the left table.
   If there is no match, the result will contain NULL values for all columns of the left table.
+-- Example 1. : write a query to display first, last name and total amount spent by each customer 
+
+SELECT 
+    first_name, 
+    last_name, 
+    IFNULL(SUM(amount), 0) AS money_spent
+FROM
+    customers
+        LEFT JOIN
+    orders ON customers.id = orders.customer_id
+GROUP BY first_name , last_name;
