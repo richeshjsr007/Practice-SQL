@@ -47,9 +47,19 @@ LEFT join papers P
 ON s.id = p.student_id
 ;
 
---Q5.: Wriet query to display first name and average grade for each students both who submitted the paper and who didn't. Also, for null use '0'.
+--Q5.: Write query to display first name and average grade for each students both who submitted the paper and who didn't. Also, for null use '0'.
 
 select first_name, ifnull(avg(grade), '0') as grades from students S
+LEFT join papers P
+ON s.id = p.student_id
+GROUP BY first_name
+order by grades DESC;
+
+--Q6.: Write query to display first name and average grade for each students both who submitted the paper and who didn't. Also, for null use '0' and 
+       display status as passing for students having grades else fail.
+
+select first_name, ifnull(avg(grade), '0') as grades, 
+if(avg(grade)>=1 ,'Passing', 'failing') As status from students S
 LEFT join papers P
 ON s.id = p.student_id
 GROUP BY first_name
