@@ -33,3 +33,8 @@ ON s.id = p.student_id
 order by grade DESC;
 
 --  Q3.: Write a query to display a list of all students alongside the titles and grades of their papers. Even if they have not submitted any papers.
+
+select first_name, title, grade from students S
+LEFT join papers P
+ON s.id = p.student_id
+;
