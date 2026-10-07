@@ -25,9 +25,11 @@ INSERT INTO papers (student_id, title, grade ) VALUES
 (2, 'De Montaigne and The Art of The Essay', 98),
 (4, 'Borges and Magical Realism', 89);
 
--- Q2.: Write query to display first name, title, & grade.
+-- Q2.: Write query to display first name, title, & grade fro those student who has submitted paper.
 
 select first_name, title, grade from students S
 inner join papers P
 ON s.id = p.student_id
 order by grade DESC;
+
+--  Q3.: Write a query to display a list of all students alongside the titles and grades of their papers. Even if they have not submitted any papers.
