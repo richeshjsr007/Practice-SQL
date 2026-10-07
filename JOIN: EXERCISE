@@ -29,4 +29,5 @@ INSERT INTO papers (student_id, title, grade ) VALUES
 
 select first_name, title, grade from students S
 inner join papers P
-ON s.id = p.student_id;
+ON s.id = p.student_id
+order by grade DESC;
