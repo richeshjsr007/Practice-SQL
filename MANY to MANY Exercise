@@ -45,5 +45,16 @@ select genre, round(avg(rating),2) as avg_rating from series s
     group by genre
     order by avg_rating;
 
+-- Q7. Write query to diplay the the names of each reviewers, no. of reviews, min., max and avg rating given by each reviewers and also show
+       status for reviewers who reviewed as Active and who didn't as Inactive.
 
+select first_name, last_name, 
+count(rating),
+ifnull(min(rating),0) as MIN,
+ifnull(max(rating), 0) as MAX,
+ifnull(avg(rating), 0) as AVG,
+if (count(rating)> 0, 'Active','inactive')as status from reviewers rs
+ join reviews r
+ on rs.id =r.reviewers_id
+ group by first_name, last_name;
 
