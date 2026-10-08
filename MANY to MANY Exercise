@@ -15,9 +15,20 @@ select title, rating from series S
     order by AVG_rating asc
     ;
 
--- Q3. Write query to diplay series title and there average ratings.
+-- Q3. Write query to diplay rating given by each viewers make sure to dispaly their names.
 
+ select first_name, last_name, rating from reviewers v
+    join reviews r
+    ON v.id = r.reviewers_id;
 
+-- Q4. Write query to diplay average rating given by each viewers make sure to dispaly their names.
+
+select first_name, last_name, round(avg(rating),1) as avg_rating from reviewers v
+    join reviews r
+    ON v.id = r.reviewers_id
+    group by first_name, last_name
+    order by avg_rating
+    ; 
 
 
 
