@@ -1,1 +1,27 @@
 -- Topic. 1: MANY to MANY joins
+-- create seperate tables for this
+
+create database tv_series;
+use tv_series;
+
+create table reviewers (
+id int primary key auto_increment,
+first_name varchar(50),
+last_name varchar(50)
+);
+
+create table series(
+id int primary key auto_increment,
+title varchar(100),
+released_year year,
+gener varchar (100)
+);
+
+create table reviews (
+id int primary key auto_increment,
+rating decimal (2,1),
+series_id int,
+reviewers_id int,
+foreign key (series_id) references series(id) on delete cascade,
+foreign key (reviewers_id) references reviewers(id) on delete cascade
+);
