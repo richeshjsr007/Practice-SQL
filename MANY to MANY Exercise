@@ -1,8 +1,25 @@
--- Q1. Write query to diplay series title and there raitings.
+-- Q1. Write query to diplay series title and there ratings.
 -- Sol.
 select title, rating from series S
     JOIN reviews R 
     ON S.id = R.series_id
     ;
+
+-- Q2. Write query to diplay series title and there average ratings.
+
+ select title, avg(rating) as Rating from series S
+    JOIN reviews R 
+    ON S.id = R.series_id
+    group by title
+    ;
+
+-- Q3. Write query to diplay series title and there average ratings.
+
+
+
+
+
+
+
 
 
