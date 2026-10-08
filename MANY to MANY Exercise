@@ -45,7 +45,7 @@ select genre, round(avg(rating),2) as avg_rating from series s
     group by genre
     order by avg_rating;
 
--- Q7. Write query to diplay the the names of each reviewers, no. of reviews, min., max and avg rating given by each reviewers and also show
+-- Q7. Write query to diplay the names of each reviewers, no. of reviews, min., max and avg rating given by each reviewers and also show
        status for reviewers who reviewed as Active and who didn't as Inactive.
 
 select first_name, last_name, 
@@ -75,3 +75,24 @@ LEFT join reviews r
 on rs.id =r.reviewers_id
 group by first_name, last_name
 order by avg DESC;
+
+-- Q8. Write query to diplay the title of the series, rating and names of reviewer.
+
+select title, rating, concat(first_name,' ', last_name) as Reviewer
+from series s
+inner join reviews rs
+on 
+s.id = rs.series_id
+inner join reviewers rr
+on 
+rr.id =rs.reviewers_id
+order by title;
+
+
+
+
+
+
+
+
+
