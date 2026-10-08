@@ -58,3 +58,20 @@ LEFT join reviews r
 on rs.id =r.reviewers_id
 group by first_name, last_name
 order by avg DESC;
+
+-- OR
+select first_name, last_name, 
+count(rating) as count,
+ifnull(min(rating),0) as MIN,
+ifnull(max(rating), 0) as MAX,
+round(ifnull(avg(rating), 0),2) as AVG,
+CASE
+        WHEN COUNT(rating) >= 10 THEN 'POWERUSER'
+        WHEN COUNT(rating) > 0 THEN 'ACTIVE'
+        ELSE 'INACTIVE'
+    END AS status
+from reviewers rs
+LEFT join reviews r
+on rs.id =r.reviewers_id
+group by first_name, last_name
+order by avg DESC;
