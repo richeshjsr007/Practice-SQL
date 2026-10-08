@@ -54,7 +54,7 @@ ifnull(min(rating),0) as MIN,
 ifnull(max(rating), 0) as MAX,
 ifnull(avg(rating), 0) as AVG,
 if (count(rating)> 0, 'Active','inactive')as status from reviewers rs
- join reviews r
- on rs.id =r.reviewers_id
- group by first_name, last_name;
-
+LEFT join reviews r
+on rs.id =r.reviewers_id
+group by first_name, last_name
+order by avg DESC;
