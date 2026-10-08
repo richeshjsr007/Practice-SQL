@@ -30,9 +30,9 @@ select first_name, last_name, round(avg(rating),1) as avg_rating from reviewers 
     order by avg_rating
     ; 
 
--- Q5. Write query to diplay the series title having no reviews.
+-- Q5. Write query to diplay the series title having no reviews and name it as unreviewed.
 
-select title from series s
+select title as unreviewed from series s
     LEFT join reviews r
     on s.id = r.series_id
     WHERE rating is null;
