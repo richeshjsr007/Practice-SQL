@@ -52,7 +52,7 @@ select first_name, last_name,
 count(rating) as count,
 ifnull(min(rating),0) as MIN,
 ifnull(max(rating), 0) as MAX,
-ifnull(avg(rating), 0) as AVG,
+round(ifnull(avg(rating), 0),2) as AVG,
 if (count(rating)> 0, 'Active','inactive')as status from reviewers rs
 LEFT join reviews r
 on rs.id =r.reviewers_id
