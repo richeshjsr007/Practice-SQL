@@ -49,7 +49,7 @@ select genre, round(avg(rating),2) as avg_rating from series s
        status for reviewers who reviewed as Active and who didn't as Inactive.
 
 select first_name, last_name, 
-count(rating),
+count(rating) as count,
 ifnull(min(rating),0) as MIN,
 ifnull(max(rating), 0) as MAX,
 ifnull(avg(rating), 0) as AVG,
