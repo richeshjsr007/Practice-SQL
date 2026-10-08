@@ -1,0 +1,26 @@
+Topic. 1: VIEW - A view merges required columns from multiple tables to create a virtual table for simpler querying and better data visualization,
+                 without actually copying or storing duplicate data.
+
+Example -  wriet query to display title, released_year, genre, first_name, last_name.
+
+SELECT 
+    title, released_year, genre, rating, first_name, last_name
+FROM
+    reviews rs
+        JOIN
+    series s ON s.id = rs.series_id
+        JOIN
+    reviewers rr ON rr.id = rs.reviewers_id;
+
+-- Now using the O/P from above query create a separate virtual table 
+
+create view master_review 
+AS
+SELECT 
+    title, released_year, genre, rating, first_name, last_name
+FROM
+    reviews rs
+        JOIN
+    series s ON s.id = rs.series_id
+        JOIN
+    reviewers rr ON rr.id = rs.reviewers_id;
