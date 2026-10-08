@@ -1,1 +1,8 @@
-Q1. 
+-- Q1. Write query to diplay series title and there raitings.
+-- Sol.
+select title, rating from series S
+    JOIN reviews R 
+    ON S.id = R.series_id
+    ;
+
+
