@@ -5,12 +5,13 @@ select title, rating from series S
     ON S.id = R.series_id
     ;
 
--- Q2. Write query to diplay series title and there average ratings.
+-- Q2. Write query to diplay series title and there average ratings lowest to highest.
 
  select title, avg(rating) as Rating from series S
     JOIN reviews R 
     ON S.id = R.series_id
     group by title
+    order by rating asc 
     ;
 
 -- Q3. Write query to diplay series title and there average ratings.
