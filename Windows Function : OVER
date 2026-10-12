@@ -1,1 +1,15 @@
 Topic.1 : Windows Function : OVER
+
+select emp_no, department, salary,
+AVG (salary) over (order by department) as AVg_sal
+from employees;
+
+SELECT emp_no, department, salary, AVG(salary) OVER() FROM employees;
+
+SELECT 
+    emp_no, 
+    department, 
+    salary, 
+    MIN(salary) OVER(),
+    MAX(salary) OVER()
+FROM employees;
