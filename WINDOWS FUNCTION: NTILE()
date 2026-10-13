@@ -1,0 +1,10 @@
+-- Topic. NTILE() - is a window function in MySQL that divides an ordered dataset into a specified number of roughly equal groups (or buckets)
+                    and assigns a group number (from 1 to N) to each row [A].
+
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    NTILE(5) OVER(PARTITION BY department ORDER BY salary DESC) AS dept_salary_quartile,
+	NTILE(5) OVER(ORDER BY salary DESC) AS salary_quartile
+FROM employees;
