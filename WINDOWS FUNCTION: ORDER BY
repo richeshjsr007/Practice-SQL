@@ -1,0 +1,6 @@
+Topic.1: ORDER BY -  Sorts the result based on the selected column(s), arranging the rows in ascending or descending order 
+                     across the result set or within each partition, depending on where it is used.
+
+select emp_no, department, salary,
+AVG (salary) over (order by department) as AVg_sal
+from employees;
