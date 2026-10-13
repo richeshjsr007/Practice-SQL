@@ -4,3 +4,13 @@ Topic.1: ORDER BY -  Sorts the result based on the selected column(s), arranging
 select emp_no, department, salary,
 AVG (salary) over (order by department) as AVg_sal
 from employees;
+
+select emp_no, department, salary,
+sum(salary) over (partition by department order by salary DESC ) as rolling_dep_pay,
+sum(salary) over (partition by department ) as total_dep_pay
+from employees;
+
+select emp_no, department, salary,
+min(salary) over (partition by department order by salary) as MIN_ROLLLING_pay,
+max(salary) over (partition by department ) as max_total_pay
+from employees;
