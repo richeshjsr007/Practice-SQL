@@ -1,0 +1,10 @@
+-- Topic : ROW_NUMBER() - It assigns a unique, sequential, and uninterrupted number (1, 2, 3, 4..) to every single row in your result set,
+                          completely ignoring ties. Even if two rows have identical values, they will receive different row numbers.
+
+-- Example: 
+select emp_no, department, salary,
+row_number () OVER (partition by department ) as dept_row_number,
+dense_rank() over (partition by department order by salary desc ) as dept_salary_rank,
+dense_rank() over (order by salary desc ) as overall_salary_ranks
+from employees
+order by department;
