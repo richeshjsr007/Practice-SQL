@@ -14,3 +14,5 @@ select emp_no, department, salary,
 min(salary) over (partition by department order by salary) as MIN_ROLLLING_pay,
 max(salary) over (partition by department ) as max_total_pay
 from employees;
+
+
