@@ -13,6 +13,15 @@ dense_rank() over (order by salary desc ) as overall_salary_ranks
 from employees
 order by department;
 
+-- Example:- Write a query to display each employee's ID, department, and salary along with a comprehensive ranking analysis.
+             For each employee, calculate the following rankings: 
+           - their unique sequential row number within their 
+           - specific department (sorted by highest salary),
+           - their salary rank within their department (allowing ties but skipping positions),
+             their overall salary rank across the entire company (skipping positions on ties),
+           - their dense overall salary rank across the company (no gaps on ties), 
+           - and a unique sequential row number across the entire company. Finally, 
+           - sort the complete output based on the overall sequential row number.
 
 select emp_no, department, salary,
 row_number () OVER (partition by department order by salary desc ) as dept_row_number,
