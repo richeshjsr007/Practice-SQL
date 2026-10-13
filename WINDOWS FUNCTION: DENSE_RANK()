@@ -1,0 +1,14 @@
+-- Topic.1: DENSE_RANK() - If rows have identical values (a tie), they get the exact same rank number, but the next rank number is NEVER skipped.
+                           The ranks will always be consecutive (1, 2, 3, 4...) without any gaps or jumps.
+
+-- Example: -  
+select emp_no, department, salary,
+dense_rank() over (partition by department order by salary desc ) as dept_salary_rank,
+dense_rank() over (order by salary desc ) as overall_salary_ranks
+from employees;
+
+select emp_no, department, salary,
+dense_rank() over (partition by department order by salary desc ) as dept_salary_rank,
+dense_rank() over (order by salary desc ) as overall_salary_ranks
+from employees
+order by department;
