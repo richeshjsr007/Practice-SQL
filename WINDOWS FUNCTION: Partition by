@@ -1,1 +1,11 @@
--- Topic.1 : Partition by
+-- Topic.1 : Partition by -  Divides the data into separate groups based on the selected column and performs calculations
+                             independently within each group, while retaining all rows in the result.
+
+-- Example: 
+select emp_no, department, salary,
+AVG (salary) over (partition by department) as Dep_AVg_sal
+from employees;
+
+select emp_no, department, salary,
+AVG (salary) over (order by department) as AVg_sal
+from employees;
