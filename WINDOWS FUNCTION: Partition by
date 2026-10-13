@@ -9,3 +9,8 @@ from employees;
 select emp_no, department, salary,
 AVG (salary) over (order by department) as AVg_sal
 from employees;
+
+select emp_no, department, salary,
+sum(salary) over (partition by department ) as dep_pay,
+sum(salary) over () as total_pay
+from employees;
