@@ -1,0 +1,18 @@
+-- Topic.1 : RANK-  If rows have identical values (a tie), they get the exact same rank number, 
+                    but the next consecutive rank numbers are skipped.
+
+select emp_no, department, salary,
+RANK() over (partition by department order by salary desc ) as dept_salary_rank,
+RANK() over (order by salary desc ) as overall_salary_ranks
+from employees;
+
+-- In above query "dept_salary_rank" = Department wise salary rank
+-- "overall_salary_ranks" = Overall salary wise rank
+
+select emp_no, department, salary,
+RANK() over (partition by department order by salary desc ) as dept_salary_rank,
+RANK() over (order by salary desc ) as overall_salary_ranks
+from employees
+order by salary;
+
+-- In query it will displays salary rank each department wise 
