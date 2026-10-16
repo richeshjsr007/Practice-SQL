@@ -1,0 +1,7 @@
+-- Topic.: LEAD & LAG - As name suggest LEADS leads the value from the row means skipping the 1st row,
+           LAG lags the value form the row access the data from imaginary row relative to current row resulting NULL values.
+
+Select emp_no, department, salary,
+LEAD(emp_no,2) over (order by emp_no) as leads,
+LAG (emp_no,2) over (order by emp_no) as lags
+from employees;
